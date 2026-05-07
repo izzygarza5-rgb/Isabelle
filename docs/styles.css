@@ -1,0 +1,215 @@
+:root {
+  --portfolio-ink: #172033;
+  --portfolio-muted: #5c667a;
+  --portfolio-line: #d9e1ec;
+  --portfolio-soft: #f5f8fb;
+  --portfolio-accent: #0b5cad;
+  --portfolio-gold: #b88900;
+}
+
+body {
+  color: var(--portfolio-ink);
+}
+
+.navbar {
+  border-bottom: 1px solid var(--portfolio-line);
+}
+
+.home #title-block-header {
+  display: none;
+}
+
+main.content:has(> .hero) > #title-block-header {
+  display: none;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(240px, .85fr);
+  align-items: center;
+  gap: 3rem;
+  padding: 4.5rem 0 3.5rem;
+  border-bottom: 1px solid var(--portfolio-line);
+}
+
+.eyebrow {
+  color: var(--portfolio-accent);
+  font-weight: 700;
+  margin-bottom: .65rem;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  font-size: .86rem;
+}
+
+.hero h1 {
+  max-width: 680px;
+  margin-bottom: 1rem;
+  font-size: 3rem;
+  line-height: 1.05;
+}
+
+.hero p {
+  max-width: 620px;
+  color: var(--portfolio-muted);
+  font-size: 1.15rem;
+}
+
+.hero-actions {
+  margin-top: 1.25rem;
+}
+
+.hero-photo {
+  justify-self: end;
+  width: min(100%, 320px);
+  margin: 0;
+}
+
+.hero-photo img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 8px solid #fff;
+  box-shadow: 0 18px 40px rgba(23, 32, 51, .14);
+  background: var(--portfolio-soft);
+}
+
+.btn {
+  margin-right: .5rem;
+  margin-top: .5rem;
+}
+
+.feature-grid,
+.stat-grid,
+.work-list,
+.project-grid {
+  display: grid;
+  gap: 1rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.feature-grid,
+.stat-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.project-grid,
+.work-list {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.feature-card,
+.work-item,
+.project-card,
+.stat {
+  border: 1px solid var(--portfolio-line);
+  border-radius: 8px;
+  padding: 1rem;
+  background: #fff;
+}
+
+.feature-card h3,
+.work-item h3,
+.project-card h3 {
+  margin-top: 0;
+}
+
+.stat {
+  background: var(--portfolio-soft);
+}
+
+.stat strong {
+  display: block;
+  color: var(--portfolio-accent);
+  font-size: 1.8rem;
+}
+
+.course-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0 2rem;
+}
+
+.course-table th,
+.course-table td {
+  border: 1px solid var(--portfolio-line);
+  padding: .7rem .8rem;
+  vertical-align: top;
+}
+
+.course-table th {
+  background: var(--portfolio-soft);
+}
+
+.course-code {
+  width: 9rem;
+  color: var(--portfolio-muted);
+  font-weight: 700;
+}
+
+.tag {
+  display: inline-block;
+  padding: .25rem .5rem;
+  border-radius: 999px;
+  border: 1px solid var(--portfolio-line);
+  color: var(--portfolio-muted);
+  font-size: .85rem;
+  margin: .15rem .15rem .15rem 0;
+}
+
+@media (max-width: 800px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding-top: 2.5rem;
+  }
+
+  .hero h1 {
+    font-size: 2.25rem;
+  }
+
+  .hero-photo {
+    justify-self: start;
+    width: 220px;
+    order: -1;
+  }
+
+  .feature-grid,
+  .stat-grid,
+  .project-grid,
+  .work-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+.resume-header {
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
+}
+
+.resume-contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem 1rem;
+  color: var(--portfolio-muted);
+  font-size: .98rem;
+  margin-bottom: 1rem;
+}
+
+.resume-contact a {
+  color: var(--portfolio-accent);
+  text-decoration: none;
+}
+
+.resume-contact a:hover {
+  text-decoration: underline;
+}
+
+.resume-section hr {
+  border-color: var(--portfolio-line);
+  margin: 2rem 0;
+}
+
+.resume-section h2 {
+  margin-top: 0;
+}

@@ -1,0 +1,31 @@
+project:
+  type: website
+
+website:
+  title: "Isabelle Garza Portfolio"
+  navbar:
+    title: "Isabelle Garza"
+    left:
+      - href: index.qmd
+        text: Home
+      - href: coursework.qmd
+        text: Coursework
+      - href: projects.qmd
+        text: Projects
+      - href: marketing-projects.qmd
+        text: Marketing
+      - href: google-analytics.qmd
+        text: Google Analytics
+      - href: resume.qmd
+        text: Resume
+      - href: about.qmd
+        text: About
+
+format:
+  html:
+    theme:
+      - flatly
+    css: styles.css
+    toc: false
+
+

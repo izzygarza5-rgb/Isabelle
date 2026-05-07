@@ -1,0 +1,44 @@
+---
+title: "Projects"
+description: "Selected academic and applied work."
+---
+
+This section is set up to showcase completed projects. Replace the placeholder summaries with the final project names, documents, images, or links.
+
+::: {.project-grid}
+::: {.project-card}
+### Business Communication Portfolio
+
+Applied business writing, presentation planning, audience analysis, and professional communication deliverables.
+
+<span class="tag">BUS 2500</span>
+<span class="tag">Communication</span>
+:::
+
+::: {.project-card}
+### Management Information Systems Project
+
+Work connected to business systems, information management, technology use, and organizational decision support.
+
+<span class="tag">CIS 3100</span>
+<span class="tag">Systems</span>
+:::
+
+::: {.project-card}
+### Market Analysis Report
+
+Research and analysis work focused on market structure, customer segments, performance indicators, and business recommendations.
+
+<span class="tag">IBM 3202</span>
+<span class="tag">Market Analysis</span>
+:::
+
+::: {.project-card}
+### Operations Management Case
+
+Course project involving process thinking, operational decisions, efficiency, and business performance.
+
+<span class="tag">TOM 3010</span>
+<span class="tag">Operations</span>
+:::
+:::

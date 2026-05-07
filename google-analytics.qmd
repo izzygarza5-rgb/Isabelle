@@ -1,0 +1,44 @@
+---
+title: "Google Analytics"
+description: "Analytics coursework and measurement-focused work."
+---
+
+This section is prepared for Google Analytics work samples such as reports, dashboards, certification evidence, or campaign measurement summaries.
+
+::: {.project-grid}
+::: {.project-card}
+### Website Traffic Report
+
+Summary of audience, acquisition, engagement, and conversion behavior using Google Analytics reporting.
+
+<span class="tag">Google Analytics</span>
+<span class="tag">Reporting</span>
+:::
+
+::: {.project-card}
+### Campaign Measurement Plan
+
+Measurement plan connecting marketing goals to KPIs, traffic sources, event tracking, and reporting cadence.
+
+<span class="tag">KPIs</span>
+<span class="tag">Campaigns</span>
+:::
+
+::: {.project-card}
+### Analytics Insight Summary
+
+Short-form analysis translating data patterns into recommendations for marketing or website performance improvement.
+
+<span class="tag">Insights</span>
+<span class="tag">Recommendations</span>
+:::
+
+::: {.project-card}
+### Statistics and Business Analytics
+
+Coursework foundation for interpreting data, summarizing patterns, and supporting decisions with quantitative evidence.
+
+<span class="tag">STA 1205</span>
+<span class="tag">TOM 3020</span>
+:::
+:::

@@ -1,0 +1,53 @@
+---
+title: "Marketing Projects"
+description: "Marketing coursework and project highlights."
+---
+
+Marketing work is organized around strategy, research, promotion, selling, and customer behavior.
+
+::: {.project-grid}
+::: {.project-card}
+### Promotional Strategy Project
+
+A campaign-oriented project focused on positioning, target audience selection, promotional channels, messaging, and evaluation.
+
+<span class="tag">IBM 3072</span>
+<span class="tag">Promotional Strategy</span>
+:::
+
+::: {.project-card}
+### Marketing Research Project
+
+Research work involving customer or market questions, evidence collection, analysis, and recommendation development.
+
+<span class="tag">IBM 3302</span>
+<span class="tag">Research</span>
+:::
+
+::: {.project-card}
+### Consumer Behavior Analysis
+
+Analysis of consumer decision-making, motivation, segmentation, and the factors that influence purchasing behavior.
+
+<span class="tag">IBM 4112</span>
+<span class="tag">Consumer Behavior</span>
+:::
+
+::: {.project-card}
+### Professional Selling Exercise
+
+Sales-focused work covering customer needs, value communication, objection handling, and relationship-based selling.
+
+<span class="tag">IBM 3062</span>
+<span class="tag">Sales</span>
+:::
+:::
+
+## Related Courses
+
+- Principles of Marketing Mgmt
+- Professional Selling
+- Promotional Strategies
+- Market Analysis and Control
+- Marketing Research
+- Consumer Behavior

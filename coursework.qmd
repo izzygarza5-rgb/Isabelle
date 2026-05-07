@@ -1,0 +1,114 @@
+---
+title: "Coursework"
+description: "Completed classes grouped by academic area."
+---
+
+The coursework below documents completed classes across business, marketing, analytics, communication, finance, management, and general education.
+
+## Marketing and Business Analytics
+
+| Code | Course |
+|---|---|
+| IBM 3012 | Principles of Marketing Mgmt |
+| IBM 3062 | Professional Selling |
+| IBM 3072 | Promotional Strategies |
+| IBM 3202 | Market Analysis and Control |
+| IBM 3302 | Marketing Research |
+| IBM 4112 | Consumer Behavior |
+| TOM 3020 | Statistical Fndtn Bus Analytic |
+| STA 1205 | Stats w/Applications w/Support |
+| STA 1205A | Stats w/Applications w/Sup Act |
+
+## Business, Management, Finance, and Economics
+
+| Code | Course |
+|---|---|
+| ACC 2070 | Fin Acc For Decision Making |
+| ACC 2080 | Mngr Acc For Decision Making |
+| BUS 2500 | Applied Business Communication |
+| CIS 1010 | Intro to Personal Computing |
+| CIS 3100 | Management Information Systems |
+| EC 2201 | Principles of Microeconomics |
+| EC 2202 | Principles of Macroeconomics |
+| FRL 2013 | Legal Env of Bus and its Txn |
+| FRL 3000 | Managerial Finance |
+| MHR 3010 | Principles of Management |
+| MHR 3020 | Organizational Behavior |
+| TOM 3010 | Operations Management |
+
+## Communication, Humanities, and Social Sciences
+
+| Code | Course |
+|---|---|
+| AG 1110 | AG Foundation of Civilizations |
+| COM 2204 | Advocacy and Argument |
+| ENG 1103 | First Year Composition |
+| EWS 2011 | African American Hstrcl Exprnc |
+| HST 2201 | United States History to 1877 |
+| HST 4406 | Hst Wmn, Gndr, & Sxlty in US |
+| MU 1010 | Music Appreciation |
+| PHL 2020 | Critical Thinking |
+| PHL 2040 | Ethical Prob in Contemp Life |
+| PLS 2010 | Intro to American Government |
+| PSY 2201 | Introduction to Psychology |
+
+## Science, Math, Wellness, and Student Success
+
+| Code | Course |
+|---|---|
+| BIO 1150 | Biology and Society |
+| BIO 1150L | Biology and Society Laboratory |
+| GSC 1160 | Introduction to Astronomy |
+| KIN 3010 | Foundations of Exercise Scienc |
+| LS 1020 | Knwldg Lrning Engmnt Success |
+| MAT 1250 | Intro Calculus for Business |
+| IBM 2000 | Spec Study for LD Students |
+
+## Full Course List
+
+<table class="course-table">
+<thead>
+<tr><th>Code</th><th>Course</th></tr>
+</thead>
+<tbody>
+<tr><td class="course-code">ACC 2070</td><td>Fin Acc For Decision Making</td></tr>
+<tr><td class="course-code">ACC 2080</td><td>Mngr Acc For Decision Making</td></tr>
+<tr><td class="course-code">AG 1110</td><td>AG Foundation of Civilizations</td></tr>
+<tr><td class="course-code">BIO 1150</td><td>Biology and Society</td></tr>
+<tr><td class="course-code">BIO 1150L</td><td>Biology and Society Laboratory</td></tr>
+<tr><td class="course-code">BUS 2500</td><td>Applied Business Communication</td></tr>
+<tr><td class="course-code">CIS 1010</td><td>Intro to Personal Computing</td></tr>
+<tr><td class="course-code">CIS 3100</td><td>Management Information Systems</td></tr>
+<tr><td class="course-code">COM 2204</td><td>Advocacy and Argument</td></tr>
+<tr><td class="course-code">EC 2201</td><td>Principles of Microeconomics</td></tr>
+<tr><td class="course-code">EC 2202</td><td>Principles of Macroeconomics</td></tr>
+<tr><td class="course-code">ENG 1103</td><td>First Year Composition</td></tr>
+<tr><td class="course-code">EWS 2011</td><td>African American Hstrcl Exprnc</td></tr>
+<tr><td class="course-code">FRL 2013</td><td>Legal Env of Bus and its Txn</td></tr>
+<tr><td class="course-code">FRL 3000</td><td>Managerial Finance</td></tr>
+<tr><td class="course-code">GSC 1160</td><td>Introduction to Astronomy</td></tr>
+<tr><td class="course-code">HST 2201</td><td>United States History to 1877</td></tr>
+<tr><td class="course-code">HST 4406</td><td>Hst Wmn, Gndr, & Sxlty in US</td></tr>
+<tr><td class="course-code">IBM 2000</td><td>Spec Study for LD Students</td></tr>
+<tr><td class="course-code">IBM 3012</td><td>Principles of Marketing Mgmt</td></tr>
+<tr><td class="course-code">IBM 3062</td><td>Professional Selling</td></tr>
+<tr><td class="course-code">IBM 3072</td><td>Promotional Strategies</td></tr>
+<tr><td class="course-code">IBM 3202</td><td>Market Analysis and Control</td></tr>
+<tr><td class="course-code">IBM 3302</td><td>Marketing Research</td></tr>
+<tr><td class="course-code">IBM 4112</td><td>Consumer Behavior</td></tr>
+<tr><td class="course-code">KIN 3010</td><td>Foundations of Exercise Scienc</td></tr>
+<tr><td class="course-code">LS 1020</td><td>Knwldg Lrning Engmnt Success</td></tr>
+<tr><td class="course-code">MAT 1250</td><td>Intro Calculus for Business</td></tr>
+<tr><td class="course-code">MHR 3010</td><td>Principles of Management</td></tr>
+<tr><td class="course-code">MHR 3020</td><td>Organizational Behavior</td></tr>
+<tr><td class="course-code">MU 1010</td><td>Music Appreciation</td></tr>
+<tr><td class="course-code">PHL 2020</td><td>Critical Thinking</td></tr>
+<tr><td class="course-code">PHL 2040</td><td>Ethical Prob in Contemp Life</td></tr>
+<tr><td class="course-code">PLS 2010</td><td>Intro to American Government</td></tr>
+<tr><td class="course-code">PSY 2201</td><td>Introduction to Psychology</td></tr>
+<tr><td class="course-code">STA 1205</td><td>Stats w/Applications w/Support</td></tr>
+<tr><td class="course-code">STA 1205A</td><td>Stats w/Applications w/Sup Act</td></tr>
+<tr><td class="course-code">TOM 3010</td><td>Operations Management</td></tr>
+<tr><td class="course-code">TOM 3020</td><td>Statistical Fndtn Bus Analytic</td></tr>
+</tbody>
+</table>

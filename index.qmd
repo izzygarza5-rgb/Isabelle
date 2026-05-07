@@ -1,0 +1,99 @@
+---
+title: "Student Portfolio"
+description: "Coursework, marketing projects, analytics work, and academic highlights."
+body-classes: home
+---
+
+::: {.hero}
+::: {.hero-copy}
+::: {.eyebrow}
+Student Portfolio
+:::
+
+# Hi, I’m Isabelle Garza {.hero-title}
+
+I’m a business, marketing, and analytics student building a portfolio that highlights my coursework, marketing projects, Google Analytics work, and academic growth. I bring strong communication, leadership, and teamwork skills alongside foundational experience with Python, RStudio, and data-informed decision making.
+
+::: {.hero-actions}
+[View Resume](resume.qmd){.btn .btn-primary}
+[View Coursework](coursework.qmd){.btn .btn-outline-primary}
+[See Projects](projects.qmd){.btn .btn-outline-primary}
+:::
+:::
+
+::: {.hero-photo}
+![](images/profile-photo.jpeg){fig-alt="Profile photo of Isabelle Garza"}
+:::
+:::
+
+## Focus Areas
+
+::: {.feature-grid}
+::: {.feature-card}
+### Marketing Strategy
+
+I connect my coursework and projects to promotional strategy, consumer behavior, marketing research, and persuasive communication.
+:::
+
+::: {.feature-card}
+### Analytics
+
+I apply Google Analytics, business analytics, market analysis, and reporting to make data-informed recommendations.
+:::
+
+::: {.feature-card}
+### Business Foundations
+
+I study accounting, economics, management, finance, communication, and organizational behavior to support strong business decisions.
+:::
+:::
+
+## Portfolio Snapshot
+
+::: {.stat-grid}
+::: {.stat}
+**43**
+
+Courses completed
+:::
+
+::: {.stat}
+**Marketing**
+
+Project concentration
+:::
+
+::: {.stat}
+**Analytics**
+
+Google Analytics and statistics
+:::
+:::
+
+## Featured Work
+
+::: {.work-list}
+::: {.work-item}
+### Marketing Projects
+
+Campaign planning, promotional strategies, sales-focused work, and research-based marketing recommendations.
+
+[Open section](marketing-projects.qmd)
+:::
+
+::: {.work-item}
+### Google Analytics
+
+Measurement planning, traffic analysis, performance reporting, and insight summaries.
+
+[Open section](google-analytics.qmd)
+:::
+
+::: {.work-item}
+### Coursework
+
+A complete academic course list organized by business, marketing, analytics, and general education areas.
+
+[Open section](coursework.qmd)
+:::
+:::
