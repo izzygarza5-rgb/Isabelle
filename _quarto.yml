@@ -20,6 +20,13 @@ website:
         text: Resume
       - href: about.qmd
         text: About
+    right:
+      - icon: envelope
+        href: mailto:izzygarza5@gmail.com
+      - icon: linkedin
+        href: https://www.linkedin.com/in/isabelle-garza-65b3262a4/
+      - icon: github
+        href: https://github.com/izzygarza5-rgb
 
 format:
   html:
