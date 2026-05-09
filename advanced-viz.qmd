@@ -1,0 +1,216 @@
+---
+title: "Advanced Data Visualization"
+author: "Isabelle Garza"
+description: "Reflection on advanced ggplot2 techniques — scales, composition, annotation, and the grammar of graphics."
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    code-fold: true
+    code-summary: "Show code"
+    code-line-numbers: true
+execute:
+  warning: false
+  error: true
+  freeze: auto
+---
+
+```{r}
+#| label: setup
+#| include: false
+library(tidyverse)
+library(patchwork)
+library(forcats)
+library(gt)
+```
+
+This page documents reflections on advanced data visualization principles and demonstrates key techniques learned through workshops by Thomas Lin Pedersen, David Robinson, and Cédric Scherer, as well as the `gt` and `gtExtras` table packages.
+
+## The Grammar of Graphics
+
+The workshop by Thomas Lin Pedersen was transformative. The core insight was to treat plots not as monolithic final products, but as **composable objects built from reusable parts**. This philosophy, rooted in the grammar of graphics, demystifies complexity.
+
+> By consciously separating data, aesthetics, geoms, and guides, even the most intricate visualizations become manageable.
+
+## Scales and Transformations
+
+Scales are the critical translators between your data and your audience. A plot's ability to communicate honestly and effectively hinges on scale choices.
+
+```{r}
+#| label: scales-demo
+#| fig-width: 10
+#| fig-height: 4
+
+df <- data.frame(
+  category = c("A", "B", "C"),
+  value = c(10, 20, 1000)
+)
+
+p1 <- ggplot(df, aes(x = category, y = value)) +
+  geom_col(fill = "#3498db", alpha = 0.85) +
+  labs(title = "Linear Scale", subtitle = "Outlier dominates the view") +
+  theme_minimal(base_size = 13) +
+  theme(plot.title = element_text(face = "bold"))
+
+p2 <- ggplot(df, aes(x = category, y = value)) +
+  geom_col(fill = "#e74c3c", alpha = 0.85) +
+  scale_y_log10() +
+  labs(title = "Log10 Scale", subtitle = "Relative differences revealed") +
+  theme_minimal(base_size = 13) +
+  theme(plot.title = element_text(face = "bold"))
+
+p1 + p2
+```
+
+The same data tells a completely different story depending on the scale. Linear scales can hide small but meaningful differences when outliers are present, while log scales reveal relative proportions.
+
+## Three Essential Functions
+
+From David Robinson's impromptu data visualization workflow, three functions stood out as essential for rapid exploratory analysis:
+
+### `dplyr::count()` — Quick Frequency Analysis
+
+```{r}
+#| label: count-demo
+#| fig-width: 8
+#| fig-height: 5
+
+mpg %>%
+  count(class) %>%
+  ggplot(aes(x = reorder(class, n), y = n)) +
+  geom_col(fill = "#2ecc71", alpha = 0.85) +
+  coord_flip() +
+  labs(
+    title = "Vehicle Class Distribution",
+    subtitle = "count() provides instant frequency summaries",
+    x = "Car Class", y = "Count"
+  ) +
+  theme_minimal(base_size = 13) +
+  theme(plot.title = element_text(face = "bold"))
+```
+
+### `tidyr::separate()` — Splitting Combined Fields
+
+```{r}
+#| label: separate-demo
+
+messy_df <- data.frame(id = 1:3, info = c("Model_A_Red", "Model_B_Blue", "Model_C_Green"))
+
+clean_df <- messy_df %>%
+  separate(info, into = c("prefix", "model", "color"), sep = "_")
+
+clean_df %>%
+  gt() %>%
+  tab_header(title = "Cleaned Data with separate()")
+```
+
+### `forcats::fct_reorder()` — Meaningful Ordering
+
+```{r}
+#| label: fct-reorder-demo
+#| fig-width: 8
+#| fig-height: 5
+
+mpg %>%
+  mutate(class = fct_reorder(class, hwy, .fun = median)) %>%
+  ggplot(aes(x = class, y = hwy)) +
+  geom_boxplot(fill = "#9b59b6", alpha = 0.6) +
+  coord_flip() +
+  labs(
+    title = "Highway MPG by Car Class",
+    subtitle = "Ordered by median MPG using fct_reorder() — patterns jump out",
+    x = "Car Class", y = "Highway MPG"
+  ) +
+  theme_minimal(base_size = 13) +
+  theme(plot.title = element_text(face = "bold"))
+```
+
+## Tables as Data Products
+
+The `gt` package redefined my perception of tables. A table can be more than a crude printout — it can be a sophisticated data product with its own visual appeal.
+
+```{r}
+#| label: gt-demo
+
+mtcars %>%
+  group_by(cyl) %>%
+  summarize(
+    n = n(),
+    avg_mpg = round(mean(mpg), 1),
+    avg_hp = round(mean(hp), 0),
+    avg_wt = round(mean(wt), 2),
+    .groups = "drop"
+  ) %>%
+  gt() %>%
+  tab_header(
+    title = "Engine Performance Summary",
+    subtitle = "Grouped by number of cylinders"
+  ) %>%
+  cols_label(
+    cyl = "Cylinders",
+    n = "Count",
+    avg_mpg = "Avg MPG",
+    avg_hp = "Avg HP",
+    avg_wt = "Avg Weight (tons)"
+  )
+```
+
+> While charts excel at showing patterns, tables are superior for presenting exact values. The combination of `gt`'s formatting rigor and the ability to embed mini visuals means a single table can communicate trend, spread, and precise figures simultaneously.
+
+## Design Principles from Cédric Scherer
+
+Three key principles for intentional, effective data visualization:
+
+1. **Use perceptually uniform palettes** — Palettes like Viridis ensure that changes in color value are perceived as equal changes in data value, without introducing false visual emphasis.
+
+2. **Refine typography and space** — Consistent font sizes, adjusted margins, and lighter gridlines create a clear visual hierarchy that guides the viewer's eye without distraction.
+
+3. **Practice intentional annotation** — Annotate sparingly. Highlight the two or three key data points, and let the rest of the data speak for itself.
+
+## Life Expectancy: Top and Bottom 5 in Asia
+
+Using `patchwork` to compose multiple plots into a single, coherent narrative.
+
+```{r}
+#| label: asia-life-exp
+#| fig-width: 12
+#| fig-height: 5
+
+library(gapminder)
+
+asia_2007 <- gapminder %>%
+  filter(year == 2007, continent == "Asia")
+
+top5 <- asia_2007 %>% slice_max(lifeExp, n = 5)
+bottom5 <- asia_2007 %>% slice_min(lifeExp, n = 5)
+
+p1 <- ggplot(top5, aes(x = reorder(country, lifeExp), y = lifeExp)) +
+  geom_col(fill = "#2ecc71", alpha = 0.85) +
+  coord_flip() +
+  labs(title = "Top 5 Life Expectancy", x = "", y = "Life Expectancy (years)") +
+  theme_minimal(base_size = 13) +
+  theme(plot.title = element_text(face = "bold"))
+
+p2 <- ggplot(bottom5, aes(x = reorder(country, lifeExp), y = lifeExp)) +
+  geom_col(fill = "#e74c3c", alpha = 0.85) +
+  coord_flip() +
+  labs(title = "Bottom 5 Life Expectancy", x = "", y = "Life Expectancy (years)") +
+  theme_minimal(base_size = 13) +
+  theme(plot.title = element_text(face = "bold"))
+
+p1 + p2 +
+  plot_annotation(
+    title = "Life Expectancy in Asia (2007)",
+    subtitle = "Composed with patchwork — comparing extremes side by side",
+    theme = theme(
+      plot.title = element_text(face = "bold", size = 16),
+      plot.subtitle = element_text(color = "gray40")
+    )
+  )
+```
+
+## Reflections on Mastering Data Visualization
+
+**Challenges identified:** Balancing creativity and clarity, managing the many ggplot2 details that govern scales, themes, and layering. Moving beyond simple charts can feel overwhelming.
+
+**Plan to overcome:** Execute every new technique in small loops — keep it simple, add one change, and re-read the message. Maintain a short checklist based on module objectives covering correlations, multi-variable layers, animation, and maps. Recreate one plot from tutorials each week to build confidence through practice.

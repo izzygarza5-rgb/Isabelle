@@ -12,10 +12,22 @@ website:
         text: Coursework
       - href: projects.qmd
         text: Projects
+      - text: Data Science
+        menu:
+          - href: data-viz.qmd
+            text: Data Visualization
+          - href: advanced-viz.qmd
+            text: Advanced Visualization
+          - href: data-wrangling.qmd
+            text: Data Wrangling
+          - href: r-programming.qmd
+            text: R Programming
       - href: marketing-projects.qmd
         text: Marketing
+      - href: certifications.qmd
+        text: Certifications
       - href: google-analytics.qmd
-        text: Google Analytics
+        text: Analytics
       - href: resume.qmd
         text: Resume
       - href: about.qmd
@@ -34,5 +46,3 @@ format:
       - flatly
     css: styles.css
     toc: false
-
-
