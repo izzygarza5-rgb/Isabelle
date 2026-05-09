@@ -1,0 +1,261 @@
+---
+title: "Data Wrangling with Tidyverse"
+author: "Isabelle Garza"
+description: "Reshaping, cleaning, and analyzing datasets using the Tidyverse ecosystem in R."
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    code-fold: true
+    code-summary: "Show code"
+    code-line-numbers: true
+execute:
+  warning: false
+  error: true
+  freeze: auto
+---
+
+```{r}
+#| label: setup
+#| include: false
+library(tidyverse)
+library(gt)
+```
+
+This page demonstrates data wrangling techniques using the Tidyverse in R. The exercises cover filtering, reshaping, pivoting, handling missing values, and combining data wrangling with visualization — applied to real datasets including `airquality`, `nycflights13`, `relig_income`, and `us_rent_income`.
+
+## Air Quality Data: Filtering and Selection
+
+Working with R's built-in `airquality` dataset to demonstrate both Tidyverse and base R approaches to data extraction.
+
+```{r}
+#| label: airquality-filter
+
+air.tib <- as_tibble(airquality)
+
+# Tidyverse approach: filter and select
+air.tib %>%
+  filter(Temp == 97) %>%
+  select(Ozone)
+```
+
+## NYC Flights: Worst Arrival Delays
+
+Identifying the 10 worst daily arrival delays across all of 2013, then averaging them by month to reveal seasonal patterns.
+
+```{r}
+#| label: worst-delays
+#| fig-width: 10
+#| fig-height: 5
+
+library(nycflights13)
+
+worst_delays <- flights %>%
+  drop_na(arr_delay) %>%
+  group_by(year, month, day) %>%
+  slice_max(arr_delay, n = 10, with_ties = FALSE) %>%
+  ungroup() %>%
+  group_by(month) %>%
+  summarise(avg_worst_delay = mean(arr_delay))
+
+ggplot(worst_delays, aes(x = factor(month), y = avg_worst_delay)) +
+  geom_col(fill = "#3498db", alpha = 0.85) +
+  labs(
+    title = "Average of the 10 Worst Daily Arrival Delays by Month",
+    subtitle = "NYC flights, 2013 — extreme delays are surprisingly consistent across months",
+    x = "Month", y = "Average Delay (minutes)"
+  ) +
+  theme_minimal(base_size = 13) +
+  theme(plot.title = element_text(face = "bold"))
+```
+
+**Insight:** The average of the most extreme arrival delays remains relatively stable across months, with no dramatic seasonal pattern, suggesting that factors causing very large delays are not strongly tied to the time of year.
+
+## Reshaping Data: Religion and Income
+
+Transforming the `relig_income` dataset from wide to long format for visualization, then creating a grouped bar chart showing income distributions across religious affiliations.
+
+```{r}
+#| label: religion-income
+#| fig-width: 12
+#| fig-height: 7
+
+relig_long <- relig_income %>%
+  pivot_longer(-religion, names_to = "income", values_to = "count") %>%
+  filter(income != "Don't know/refused")
+
+ggplot(relig_long, aes(x = religion, y = count, fill = income)) +
+  geom_col(position = position_dodge(preserve = "single")) +
+  scale_fill_viridis_d() +
+  labs(
+    title = "Income Distribution by Religious Affiliation",
+    subtitle = "Data reshaped from wide to long format using pivot_longer()",
+    x = "Religion", y = "Number of Respondents", fill = "Income Bracket"
+  ) +
+  theme_minimal(base_size = 11) +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1, size = 9),
+    plot.title = element_text(face = "bold"),
+    legend.position = "bottom"
+  )
+```
+
+## Rent vs. Income: Pivot Wider
+
+Using `pivot_wider()` to reshape the `us_rent_income` dataset and explore the relationship between median income and median rent across US states.
+
+```{r}
+#| label: rent-income
+#| fig-width: 9
+#| fig-height: 6
+
+us_rent_income %>%
+  pivot_wider(names_from = variable, values_from = c(estimate, moe)) %>%
+  ggplot(aes(x = estimate_income, y = estimate_rent)) +
+  geom_point(color = "#27ae60", size = 2.5, alpha = 0.7) +
+  geom_smooth(method = "lm", se = FALSE, color = "#e74c3c", linewidth = 1.2) +
+  labs(
+    title = "Median Income vs. Median Rent Across US States",
+    subtitle = "Strong positive relationship — higher income states have higher rents",
+    x = "Median Income ($)", y = "Median Rent ($)"
+  ) +
+  theme_minimal(base_size = 13) +
+  theme(plot.title = element_text(face = "bold"))
+```
+
+## Handling Missing Values
+
+Demonstrating multiple strategies for identifying and replacing missing values in the `airquality` dataset using mean imputation.
+
+```{r}
+#| label: missing-values
+
+air.tib <- as_tibble(airquality)
+
+# Missing value summary
+missing_summary <- air.tib %>%
+  summarise(
+    missing_n = sum(is.na(Solar.R)),
+    missing_pct = round(mean(is.na(Solar.R)) * 100, 1)
+  )
+
+missing_summary %>%
+  gt() %>%
+  cols_label(missing_n = "Missing Count", missing_pct = "Missing %") %>%
+  tab_header(title = "Solar Radiation: Missing Value Summary")
+```
+
+```{r}
+#| label: impute-missing
+
+# Compute rounded mean for imputation
+solar_mean_rounded <- air.tib %>%
+  summarise(avg = round(mean(Solar.R, na.rm = TRUE))) %>%
+  pull(avg)
+
+# Replace NAs with mean
+air.tib <- air.tib %>%
+  mutate(Solar.R = if_else(is.na(Solar.R), solar_mean_rounded, Solar.R))
+
+# Verify
+paste("Remaining NAs in Solar.R:", sum(is.na(air.tib$Solar.R)))
+```
+
+## Temperature Analysis by Month
+
+Aggregating temperature data by month and visualizing it with ordered bar charts.
+
+::: {.panel-tabset}
+
+### Total Temperature
+
+```{r}
+#| label: total-temp
+#| fig-width: 8
+#| fig-height: 5
+
+air.tib %>%
+  mutate(Month_name = case_when(
+    Month == 5 ~ "May", Month == 6 ~ "June", Month == 7 ~ "July",
+    Month == 8 ~ "August", Month == 9 ~ "September"
+  )) %>%
+  group_by(Month_name) %>%
+  summarise(total_temp = sum(Temp, na.rm = TRUE)) %>%
+  ggplot(aes(x = total_temp, y = fct_reorder(Month_name, total_temp))) +
+  geom_col(fill = "#e74c3c", alpha = 0.85) +
+  labs(title = "Total Recorded Temperature by Month", x = "Total Temperature", y = "") +
+  theme_minimal(base_size = 13) +
+  theme(plot.title = element_text(face = "bold"))
+```
+
+### Maximum Temperature
+
+```{r}
+#| label: max-temp
+#| fig-width: 8
+#| fig-height: 5
+
+air.tib %>%
+  group_by(Month) %>%
+  summarise(max_temp = max(Temp, na.rm = TRUE)) %>%
+  mutate(Month = recode(Month, `5` = "May", `6` = "June", `7` = "July",
+                               `8` = "August", `9` = "September")) %>%
+  ggplot(aes(x = max_temp, y = fct_reorder(Month, max_temp))) +
+  geom_col(fill = "#f39c12", alpha = 0.85) +
+  labs(title = "Highest Temperature by Month", x = "Maximum Temperature (°F)", y = "") +
+  theme_minimal(base_size = 13) +
+  theme(plot.title = element_text(face = "bold"))
+```
+
+:::
+
+## Multivariate Exploration: Ozone Relationships
+
+Exploring how temperature, wind speed, and their ratio relate to ozone levels using faceted scatter plots.
+
+```{r}
+#| label: ozone-multivariate
+#| fig-width: 12
+#| fig-height: 5
+
+air.tib %>%
+  mutate(temp_wind = Temp / Wind) %>%
+  pivot_longer(cols = c(Temp, Wind, temp_wind),
+               names_to = "variable",
+               values_to = "value") %>%
+  ggplot(aes(x = value, y = Ozone)) +
+  geom_point(alpha = 0.5, color = "#3498db", size = 1.8) +
+  geom_smooth(method = "lm", se = FALSE, color = "#e74c3c", linewidth = 1) +
+  facet_wrap(~variable, scales = "free_x") +
+  labs(
+    title = "Ozone vs. Temperature, Wind, and Their Ratio",
+    subtitle = "Temperature drives ozone up; wind drives it down",
+    x = "Variable Value", y = "Ozone (ppb)"
+  ) +
+  theme_minimal(base_size = 13) +
+  theme(
+    plot.title = element_text(face = "bold"),
+    strip.text = element_text(face = "bold")
+  )
+```
+
+**Conclusion:** Ozone is positively associated with temperature and negatively associated with wind speed. The ratio `Temp/Wind` does not reveal a strong linear relationship, indicating that the individual effects of temperature and wind are more informative than their simple quotient.
+
+## Top Destinations from NYC
+
+A quick analysis of flight volumes to identify the most popular destinations from New York City airports.
+
+```{r}
+#| label: top-destinations
+
+flights %>%
+  count(dest, sort = TRUE) %>%
+  slice_head(n = 10) %>%
+  gt() %>%
+  cols_label(dest = "Destination", n = "Number of Flights") %>%
+  tab_header(
+    title = "Top 10 Destinations from NYC",
+    subtitle = "2013 flight data from nycflights13"
+  ) %>%
+  fmt_number(columns = n, use_seps = TRUE, decimals = 0)
+```

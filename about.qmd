@@ -2,16 +2,36 @@
 title: "About"
 ---
 
-I’m passionate about building a portfolio that brings together my academic and applied work in business, marketing, analytics, communication, finance, and management.
+I'm Isabelle Garza, a business, marketing, and analytics student at California State Polytechnic University, Pomona. I'm passionate about building a portfolio that brings together my academic and applied work across data science, marketing strategy, enterprise systems, and business analytics.
 
 ## Academic Profile
 
-My coursework reflects a broad business education with emphasis in marketing management, promotional strategy, consumer behavior, market analysis, business analytics, finance, management information systems, and communication.
+My coursework reflects a broad business education with emphasis in marketing management, promotional strategy, consumer behavior, market analysis, business analytics, finance, management information systems, and communication. I have completed hands-on work with:
+
+- **R & the Tidyverse** — Data visualization with ggplot2, data wrangling with dplyr/tidyr, interactive visualizations with Plotly, functional programming with purrr
+- **SAP Enterprise Systems** — Financial Accounting (FI), Sales & Distribution (SD), Materials Management (MM), and Production Planning (PP)
+- **Analytics Tools** — Tableau 2024.1, Excel PivotTables, Google Analytics, and statistical analysis
+- **Programming** — Python fundamentals, R programming, and data-driven decision making
 
 ## What This Site Includes
 
-- A complete list of classes I’ve completed
-- Project summaries and work samples
-- Marketing project highlights
-- Google Analytics coursework and reporting examples
-- Business, communication, and analytics coursework
+- **Data Science Work** — Complete R-based projects with live visualizations including scatter plots, bar charts, boxplots, correlation heatmaps, and interactive Plotly charts
+- **Project Summaries** — SAP enterprise system work, production planning reports, and business case analyses
+- **Marketing Projects** — Campaign planning, consumer behavior analysis, and promotional strategy
+- **Certifications** — LinkedIn Learning and NASBA certifications in Tableau and Excel PivotTables
+- **Complete Coursework** — 43 courses across business, marketing, analytics, and general education
+
+## Leadership & Community
+
+Beyond academics, I serve as a leader in my community through:
+
+- **Zeta Tau Alpha** — Contributing to philanthropic efforts centered around breast cancer education and awareness
+- **Team Captain** — Leading and mentoring team members at Corona del Mar High School
+- **Best Buddies** — Supporting inclusion programs for individuals with intellectual and developmental disabilities
+- **Orange County Food Bank** — Volunteering in food distribution and community outreach
+
+## Languages
+
+- English — Fluent
+- Spanish — Intermediate Proficiency
+- American Sign Language (ASL) — Intermediate Proficiency

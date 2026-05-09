@@ -1,0 +1,88 @@
+---
+title: "Certifications"
+description: "Professional certifications and completed training."
+---
+
+This section highlights my professional certifications and completed training.
+
+---
+
+::: {.cert-grid}
+
+::: {.cert-card}
+![Excel: PivotTables in Depth](certs/excel-pivottables-linkedin.png){.cert-preview}
+
+::: {.cert-details}
+### Excel: PivotTables in Depth
+
+**Date Completed:** January 29, 2026
+
+**Skills:** Pivot Tables, Microsoft Excel
+
+**Issuer:** LinkedIn Learning
+
+**Credential ID:** `553a2da1b53a35f5c034702a5c586a5344c0b48cae8f7a4b6afceba974a1ef4b`
+
+[Download Certificate](certs/excel-pivottables-linkedin.pdf){.btn .btn-primary download="Excel-PivotTables-LinkedIn.pdf"}
+:::
+:::
+
+::: {.cert-card}
+![Excel: PivotTables in Depth — NASBA CPE](certs/excel-pivottables-nasba.png){.cert-preview}
+
+::: {.cert-details}
+### Excel: PivotTables in Depth (NASBA CPE)
+
+**Date Completed:** January 29, 2026
+
+**Skills:** Pivot Tables, Microsoft Excel
+
+**Issuer:** LinkedIn Learning and NASBA
+
+**CPE Credits:** 6.40
+
+**Credential ID:** `89ea698aeb84d1e53b62056857ce2b9db1c27817c660ea753216337dfe498496`
+
+[Download CPE Certificate](certs/excel-pivottables-nasba.pdf){.btn .btn-primary download="Excel-PivotTables-NASBA.pdf"}
+:::
+:::
+
+::: {.cert-card}
+![Tableau 2024.1: Essential Training](certs/tableau-essential-linkedin.png){.cert-preview}
+
+::: {.cert-details}
+### Tableau 2024.1: Essential Training
+
+**Date Completed:** January 31, 2026
+
+**Skills:** Tableau, Data Analysis
+
+**Issuer:** LinkedIn Learning
+
+**Credential ID:** `c2474e4c28ceb1e57d339ad36334810d894398df43536baaa6b17b32b4a0eb47`
+
+[Download Certificate](certs/tableau-essential-linkedin.pdf){.btn .btn-primary download="Tableau-Essential-LinkedIn.pdf"}
+:::
+:::
+
+::: {.cert-card}
+![Tableau 2024.1: Essential Training — NASBA CPE](certs/tableau-essential-nasba.png){.cert-preview}
+
+::: {.cert-details}
+### Tableau 2024.1: Essential Training (NASBA CPE)
+
+**Date Completed:** February 02, 2026
+
+**Skills:** Tableau, Data Analysis
+
+**Issuer:** LinkedIn Learning and NASBA
+
+**CPE Credits:** 10.80
+
+**Credential ID:** `cf41696f4717d5266991d8a8ce50f77ebed97263bcb1ad7c0c609a6a280a1a81`
+
+[Download CPE Certificate](certs/tableau-essential-nasba.pdf){.btn .btn-primary download="Tableau-Essential-NASBA.pdf"}
+:::
+:::
+
+:::

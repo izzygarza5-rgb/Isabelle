@@ -1,6 +1,6 @@
 ---
 title: "Student Portfolio"
-description: "Coursework, marketing projects, analytics work, and academic highlights."
+description: "Coursework, data science projects, marketing work, analytics certifications, and academic highlights."
 body-classes: home
 ---
 
@@ -10,13 +10,13 @@ body-classes: home
 Student Portfolio
 :::
 
-# Hi, I’m Isabelle Garza {.hero-title}
+# Hi, I'm Isabelle Garza {.hero-title}
 
-I’m a business, marketing, and analytics student building a portfolio that highlights my coursework, marketing projects, Google Analytics work, and academic growth. I bring strong communication, leadership, and teamwork skills alongside foundational experience with Python, RStudio, and data-informed decision making.
+I'm a business, marketing, and analytics student at Cal Poly Pomona building a portfolio that highlights my data science projects, R programming skills, marketing strategy work, SAP enterprise system experience, and professional certifications in Tableau and Excel. I bring strong communication, leadership, and teamwork skills alongside hands-on experience with Python, RStudio, ggplot2, and data-informed decision making.
 
 ::: {.hero-actions}
 [View Resume](resume.qmd){.btn .btn-primary}
-[View Coursework](coursework.qmd){.btn .btn-outline-primary}
+[Data Science Work](data-viz.qmd){.btn .btn-outline-primary}
 [See Projects](projects.qmd){.btn .btn-outline-primary}
 :::
 :::
@@ -30,21 +30,21 @@ I’m a business, marketing, and analytics student building a portfolio that hig
 
 ::: {.feature-grid}
 ::: {.feature-card}
+### Data Science & R Programming
+
+I build data visualizations with ggplot2, wrangle datasets using the Tidyverse, create interactive plots with Plotly, and apply functional programming patterns to real-world data analysis in R.
+:::
+
+::: {.feature-card}
 ### Marketing Strategy
 
-I connect my coursework and projects to promotional strategy, consumer behavior, marketing research, and persuasive communication.
+I connect my coursework and projects to promotional strategy, consumer behavior, marketing research, and persuasive communication through campaign planning and market analysis.
 :::
 
 ::: {.feature-card}
-### Analytics
+### Analytics & Business Intelligence
 
-I apply Google Analytics, business analytics, market analysis, and reporting to make data-informed recommendations.
-:::
-
-::: {.feature-card}
-### Business Foundations
-
-I study accounting, economics, management, finance, communication, and organizational behavior to support strong business decisions.
+I apply Google Analytics, Tableau, Excel PivotTables, business analytics, and statistical methods to make data-informed recommendations.
 :::
 :::
 
@@ -58,15 +58,15 @@ Courses completed
 :::
 
 ::: {.stat}
-**Marketing**
+**4**
 
-Project concentration
+SAP modules completed
 :::
 
 ::: {.stat}
-**Analytics**
+**3**
 
-Google Analytics and statistics
+Professional certifications
 :::
 :::
 
@@ -74,26 +74,50 @@ Google Analytics and statistics
 
 ::: {.work-list}
 ::: {.work-item}
+### Data Visualization in R
+
+Scatter plots, bar charts, boxplots, correlation heatmaps, and interactive Plotly visualizations built with ggplot2 and the Wooldridge attendance dataset.
+
+[Open section](data-viz.qmd)
+:::
+
+::: {.work-item}
+### Data Wrangling with Tidyverse
+
+Data reshaping, pivot operations, missing value handling, and multi-dataset analysis using dplyr, tidyr, and ggplot2 on NYC flights, air quality, and census data.
+
+[Open section](data-wrangling.qmd)
+:::
+
+::: {.work-item}
+### SAP & Enterprise Projects
+
+Hands-on SAP work across Financial Accounting, Sales & Distribution, Materials Management, and Production Planning modules.
+
+[Open section](projects.qmd)
+:::
+
+::: {.work-item}
 ### Marketing Projects
 
-Campaign planning, promotional strategies, sales-focused work, and research-based marketing recommendations.
+Campaign planning, promotional strategies, consumer behavior analysis, and research-based marketing recommendations.
 
 [Open section](marketing-projects.qmd)
 :::
 
 ::: {.work-item}
-### Google Analytics
+### R Programming & Functions
 
-Measurement planning, traffic analysis, performance reporting, and insight summaries.
+Custom functions, apply/map patterns, nested data analysis, and automated chart generation for student-teacher ratio data across multiple years.
 
-[Open section](google-analytics.qmd)
+[Open section](r-programming.qmd)
 :::
 
 ::: {.work-item}
-### Coursework
+### Analytics & Certifications
 
-A complete academic course list organized by business, marketing, analytics, and general education areas.
+Tableau 2024.1, Excel PivotTables, Google Analytics reporting, and statistical coursework foundations.
 
-[Open section](coursework.qmd)
+[Open section](google-analytics.qmd)
 :::
 :::

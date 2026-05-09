@@ -1,0 +1,318 @@
+---
+title: "Data Visualization in R"
+author: "Isabelle Garza"
+description: "Exploring data visualization techniques using ggplot2, plotly, and the grammar of graphics."
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    code-fold: true
+    code-summary: "Show code"
+    code-line-numbers: true
+execute:
+  warning: false
+  error: true
+  freeze: auto
+---
+
+```{r}
+#| label: setup
+#| include: false
+library(tidyverse)
+library(ggrepel)
+library(ggthemes)
+library(scales)
+library(plotly)
+library(GGally)
+library(gt)
+library(wooldridge)
+
+df <- attend
+df <- as_tibble(df)
+```
+
+This page showcases data visualization work completed as part of my data science coursework. Each section demonstrates a different visualization technique using R and the `ggplot2` ecosystem, applied to the `attend` dataset from the Wooldridge package.
+
+## Interactive Data Table
+
+Using the `gt` package to create a professional, formatted data table with custom column labels, percentage formatting, and styled borders.
+
+```{r}
+#| label: gt-table
+
+df %>%
+  head(12) %>%
+  gt() %>%
+  cols_label(
+    termGPA = "Term GPA",
+    priGPA = "Prior GPA",
+    atndrte = "Attendance Rate",
+    hwrte = "Homework Rate",
+    frosh = "Freshman",
+    soph = "Sophomore"
+  ) %>%
+  tab_options(
+    table.border.top.style = "solid",
+    table.border.top.color = "#0b5cad",
+    table.border.bottom.style = "solid",
+    table.border.bottom.color = "#0b5cad"
+  ) %>%
+  tab_header(
+    title = "Student Attendance Dataset",
+    subtitle = "Sample from the Wooldridge 'attend' dataset"
+  ) %>%
+  fmt_percent(
+    columns = atndrte, decimals = 1,
+    scale_values = FALSE
+  ) %>%
+  fmt_number(
+    columns = c(termGPA, priGPA), decimals = 2
+  )
+```
+
+## Scatter Plot: Prior GPA vs. Missed Classes
+
+A faceted scatter plot examining whether the relationship between prior GPA and missed classes differs between sophomores and non-sophomores. The linear regression lines reveal a negative trend — higher GPA is associated with fewer missed classes — and the pattern holds across both groups.
+
+```{r}
+#| label: scatter-gpa-missed
+#| fig-width: 10
+#| fig-height: 5
+
+df_sophomore_recoded <- df %>%
+  mutate(soph = factor(ifelse(soph == "1", "Sophomore", "Non-Sophomore")))
+
+df_sophomore_recoded %>%
+  ggplot(aes(priGPA, missed)) +
+  geom_point(size = 2, color = "#2c3e50", alpha = 0.5) +
+  geom_smooth(method = "lm", se = FALSE, color = "#e74c3c", linewidth = 1.2) +
+  facet_wrap(~ soph) +
+  theme_minimal(base_size = 13) +
+  labs(
+    title = "Relationship Between Prior GPA and Missed Classes",
+    subtitle = "Faceted by sophomore status — higher GPA correlates with fewer absences",
+    x = "Prior GPA",
+    y = "Number of Missed Classes"
+  ) +
+  theme(
+    plot.title = element_text(face = "bold"),
+    strip.text = element_text(face = "bold", size = 12)
+  )
+```
+
+## ACT Score Distribution
+
+A bar plot showing the distribution of ACT scores in the dataset. The distribution approximates a normal (bell-shaped) curve, which is consistent with standardized test score patterns.
+
+```{r}
+#| label: act-distribution
+#| fig-width: 8
+#| fig-height: 5
+
+ggplot(df, aes(x = ACT)) +
+  geom_bar(fill = "#3498db", alpha = 0.85) +
+  labs(
+    title = "Distribution of ACT Scores",
+    subtitle = "Approximately normal distribution across the student sample",
+    x = "ACT Score",
+    y = "Count"
+  ) +
+  theme_minimal(base_size = 13) +
+  theme(plot.title = element_text(face = "bold"))
+```
+
+## Comparing Bar Chart Types
+
+A critical comparison of dodge, stacked, and faceted bar charts to determine which chart type most accurately represents the relationship between ACT scores, final exam performance, and sophomore status.
+
+::: {.panel-tabset}
+
+### Dodge Chart (Means)
+
+```{r}
+#| label: dodge-means
+#| fig-width: 10
+#| fig-height: 5
+
+df_averages <- df %>%
+  mutate(soph_label = factor(soph, levels = c(0, 1),
+                             labels = c("Not Sophomore", "Sophomore"))) %>%
+  group_by(ACT, soph_label) %>%
+  summarise(mean_final = mean(final, na.rm = TRUE), .groups = "drop")
+
+ggplot(df_averages, aes(x = ACT, y = mean_final, fill = soph_label)) +
+  geom_col(position = "dodge", width = 0.9) +
+  scale_fill_manual(values = c("Not Sophomore" = "#3498db", "Sophomore" = "#e74c3c")) +
+  labs(
+    title = "Mean Final Score by ACT and Sophomore Status",
+    subtitle = "Dodge chart using averaged scores — the most accurate representation",
+    x = "ACT Score", y = "Mean Final Score", fill = "Status"
+  ) +
+  theme_minimal(base_size = 13) +
+  theme(legend.position = "bottom", plot.title = element_text(face = "bold"))
+```
+
+### Stacked Chart (Means)
+
+```{r}
+#| label: stacked-means
+#| fig-width: 10
+#| fig-height: 5
+
+ggplot(df_averages, aes(x = ACT, y = mean_final, fill = soph_label)) +
+  geom_bar(stat = "identity", width = 0.9) +
+  scale_fill_manual(values = c("Not Sophomore" = "#3498db", "Sophomore" = "#e74c3c")) +
+  labs(
+    title = "Mean Final Score by ACT and Sophomore Status",
+    subtitle = "Stacked chart — harder to compare individual group values",
+    x = "ACT Score", y = "Mean Final Score", fill = "Status"
+  ) +
+  theme_minimal(base_size = 13) +
+  theme(plot.title = element_text(face = "bold"))
+```
+
+### Faceted Chart (Means)
+
+```{r}
+#| label: faceted-means
+#| fig-width: 10
+#| fig-height: 6
+
+ggplot(df_averages, aes(x = ACT, y = mean_final, fill = soph_label)) +
+  geom_col(width = 0.7, show.legend = FALSE) +
+  facet_grid(soph_label ~ .) +
+  scale_fill_manual(values = c("Not Sophomore" = "#3498db", "Sophomore" = "#e74c3c")) +
+  labs(
+    title = "Mean Final Score by ACT and Sophomore Status",
+    subtitle = "Faceted view — clear separation for individual group analysis",
+    x = "ACT Score", y = "Mean Final Score"
+  ) +
+  theme_minimal(base_size = 13) +
+  theme(
+    strip.background = element_rect(fill = "#ecf0f1"),
+    strip.text = element_text(face = "bold", size = 11),
+    plot.title = element_text(face = "bold")
+  )
+```
+
+:::
+
+**Key Finding:** The dodge and faceted charts using *averaged* data accurately represent the underlying patterns. The stacked chart makes group comparison difficult. Higher ACT scores consistently predict higher final scores, and sophomores maintain a modest advantage across nearly all ACT levels.
+
+## Boxplot with Jittered Points
+
+A boxplot enhanced with jittered individual data points provides the most comprehensive view — showing the median, spread, outliers, and the full distribution simultaneously.
+
+```{r}
+#| label: boxplot-jitter
+#| fig-width: 12
+#| fig-height: 6
+
+ggplot(df_sophomore_recoded, aes(x = factor(ACT), y = final, fill = soph)) +
+  geom_boxplot(outlier.shape = NA, alpha = 0.7, width = 0.6) +
+  geom_jitter(
+    position = position_jitterdodge(jitter.width = 0.2, dodge.width = 0.7),
+    aes(color = soph), alpha = 0.5, size = 1.5, show.legend = FALSE
+  ) +
+  scale_fill_manual(values = c("Non-Sophomore" = "#3498db", "Sophomore" = "#2ecc71")) +
+  scale_color_manual(values = c("Non-Sophomore" = "#2c3e50", "Sophomore" = "#27ae60")) +
+  labs(
+    title = "Final Scores by ACT and Sophomore Status",
+    subtitle = "Boxplots reveal distribution spread; jittered points show individual observations",
+    x = "ACT Score", y = "Final Score", fill = "Status"
+  ) +
+  theme_minimal(base_size = 13) +
+  theme(
+    legend.position = "bottom",
+    plot.title = element_text(face = "bold", size = 14),
+    axis.text.x = element_text(angle = 45, hjust = 1)
+  )
+```
+
+**Insight:** Sophomores consistently outperform non-sophomores with slightly elevated medians across most ACT levels, suggesting additional academic experience contributes to stronger performance.
+
+## Attendance Rate by ACT Score
+
+Examining how freshman status moderates the relationship between ACT scores and class attendance.
+
+```{r}
+#| label: attendance-scatter
+#| fig-width: 10
+#| fig-height: 5
+
+df_freshman_recoded <- df %>%
+  mutate(
+    freshman_label = factor(frosh, levels = c(0, 1),
+                            labels = c("Non-Freshman", "Freshman"))
+  )
+
+ggplot(df_freshman_recoded, aes(x = ACT, y = atndrte)) +
+  geom_point(alpha = 0.4, color = "#3498db") +
+  geom_smooth(method = "lm", se = FALSE, color = "#e74c3c", linewidth = 1.2) +
+  facet_wrap(~ freshman_label) +
+  labs(
+    title = "Attendance Rate vs. ACT Score",
+    subtitle = "Freshmen attend less and show a weaker ACT–attendance relationship",
+    x = "ACT Score", y = "Attendance Rate (%)"
+  ) +
+  theme_minimal(base_size = 13) +
+  theme(
+    plot.title = element_text(face = "bold"),
+    strip.text = element_text(face = "bold", size = 12)
+  )
+```
+
+**Finding:** Freshmen not only attend less across all ACT levels but also show a diminished response to ACT — the slope for freshmen is notably shallower, indicating that factors beyond academic aptitude drive their attendance patterns.
+
+## Correlation Analysis
+
+A comprehensive correlation analysis of key academic variables using both a pairs matrix and a heatmap.
+
+```{r}
+#| label: correlation-heatmap
+#| fig-width: 9
+#| fig-height: 7
+
+df_var <- df %>%
+  select(attend, termGPA, priGPA, ACT, final, atndrte, hwrte)
+
+ggcorr(df_var, label = TRUE, label_round = 2, hjust = 0.6, size = 4,
+       layout.exp = 2) +
+  labs(title = "Correlation Heatmap of Academic Variables") +
+  theme(plot.title = element_text(face = "bold", size = 14))
+```
+
+**Key Findings:**
+
+- **Strongest correlation:** `attend` and `atndrte` (r = 1.0) — these are directly derived from each other
+- **Next strongest:** `termGPA` and `priGPA` (r ≈ 0.7) — strong academic consistency
+- **Attendance vs. homework for GPA:** Attendance rate shows stronger correlations with both term and prior GPA than homework submission, suggesting that class attendance may be a more effective strategy for improving grades
+
+## Interactive Visualization
+
+Using `plotly` to create an interactive scatter plot that allows exploration of the relationship between prior GPA and term GPA.
+
+```{r}
+#| label: interactive-plot
+#| fig-width: 10
+#| fig-height: 6
+
+df_soph_labeled <- df %>%
+  mutate(soph_label = factor(soph, levels = c(0, 1),
+                              labels = c("Not Sophomore", "Sophomore")))
+
+scatter_plt <- ggplot(df_soph_labeled, aes(x = priGPA, y = termGPA, color = soph_label)) +
+  geom_point(alpha = 0.4) +
+  geom_smooth(method = "lm", se = FALSE) +
+  scale_color_manual(values = c("Not Sophomore" = "#e74c3c", "Sophomore" = "#2c3e50")) +
+  labs(
+    title = "Prior GPA vs. Term GPA",
+    subtitle = "Interactive — hover to explore individual data points",
+    x = "Prior GPA", y = "Term GPA", color = "Status"
+  ) +
+  theme_minimal(base_size = 13)
+
+ggplotly(scatter_plt, tooltip = c("x", "y", "color"))
+```
+
+A strong positive relationship exists between prior and current GPA across both class levels, demonstrating academic consistency regardless of sophomore status.

@@ -1,0 +1,292 @@
+---
+title: "R Programming & Functional Programming"
+author: "Isabelle Garza"
+description: "Control flow, custom functions, apply/map patterns, and real-world data analysis in R."
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    code-fold: true
+    code-summary: "Show code"
+    code-line-numbers: true
+execute:
+  warning: false
+  error: true
+  freeze: auto
+---
+
+```{r}
+#| label: setup
+#| include: false
+library(tidyverse)
+library(purrr)
+library(gt)
+```
+
+This page showcases R programming concepts including conditional logic, loops, custom functions, the `apply` family, `purrr::map` functions, and their application to real-world data analysis.
+
+## Control Flow: If/Else Logic
+
+### Sales Performance Classifier
+
+```{r}
+#| label: sales-classifier
+
+sales <- 25
+
+if (sales < 20) {
+  print("Not enough for today.")
+} else if (sales >= 20 && sales <= 30) {
+  print("Average Day")
+} else {
+  print("You had a great day!")
+}
+```
+
+### Tax Rate Calculator
+
+A function-style approach using `ifelse()` to apply category-based tax rates:
+
+```{r}
+#| label: tax-calculator
+
+category <- "A"
+price <- 100
+
+tax_rate <- ifelse(category == "A", 0.08,
+                   ifelse(category == "B", 0.10, 0.20))
+
+total <- price + price * tax_rate
+message(paste("A tax rate of", tax_rate * 100, "% is applied. The total price is", total))
+```
+
+## Loops: Counting and Filtering
+
+### Counting Even Numbers
+
+```{r}
+#| label: count-evens
+
+q4 <- c(2, 5, 3, 9, 8, 11, 6)
+count <- 0
+
+for (i in q4) {
+  if (i %% 2 == 0) {
+    count <- count + 1
+  }
+}
+
+paste("Even numbers found:", count)
+```
+
+### Conditional Printing with Loops
+
+```{r}
+#| label: conditional-loop
+
+q5 <- 1:8
+for (i in seq_along(q5)) {
+  val <- q5[i]
+  if (val > 4 && val %% 2 == 0) {
+    print(val)
+  } else {
+    print("Condition not satisfied")
+  }
+}
+```
+
+## Custom Functions
+
+### Power Function
+
+```{r}
+#| label: power-function
+
+pow <- function(x, y) {
+  result <- x^y
+  paste0(x, " raised to the power of ", y, " is ", result, ".")
+}
+
+pow(8, 2)
+pow(3, 4)
+pow(2, 10)
+```
+
+## Apply Family vs. Map Family
+
+Comparing base R's `apply`/`lapply`/`sapply` functions with `purrr`'s `map` functions for functional programming.
+
+### Row-Level Statistics with `apply()`
+
+```{r}
+#| label: apply-demo
+
+df <- data.frame(x = 1:4, y = 5:8, z = 10:13)
+df$mean <- apply(df, 1, mean)
+df$sum  <- apply(df, 1, sum)
+
+df %>%
+  gt() %>%
+  tab_header(title = "Row-Level Statistics Using apply()")
+```
+
+### Square Roots: lapply vs. map
+
+```{r}
+#| label: lapply-vs-map
+
+q8 <- c(12, 18, 6)
+
+# apply family
+cat("lapply result:\n")
+lapply(q8, sqrt)
+
+# map family
+cat("\nmap result:\n")
+map(q8, sqrt)
+```
+
+> **Key difference:** `lapply()` always outputs a list, while `sapply()` tries to simplify. In `purrr`, `map()` returns a list, while `map_dbl()` returns a typed numeric vector — making results easier to work with downstream.
+
+## Student-Teacher Ratios: Functional Approach
+
+Using custom functions and `lapply()` to automate chart generation across multiple years of data.
+
+```{r}
+#| label: student-teacher-data
+#| include: false
+
+student_ratio <- read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2019/2019-05-07/student_teacher_ratio.csv")
+```
+
+### Reusable Chart Function
+
+```{r}
+#| label: ratio-function
+
+plot_ratio <- function(year_input) {
+  student_ratio %>%
+    filter(year == year_input) %>%
+    top_n(10, student_ratio) %>%
+    ggplot(aes(x = reorder(country, student_ratio), y = student_ratio)) +
+    geom_col(fill = "#3498db", alpha = 0.85) +
+    coord_flip() +
+    labs(
+      title = "Top 10 Countries by Student-Teacher Ratio",
+      subtitle = paste("Year:", year_input),
+      x = "", y = "Student-Teacher Ratio"
+    ) +
+    theme_minimal(base_size = 12) +
+    theme(plot.title = element_text(face = "bold"))
+}
+```
+
+### Generated Charts: 2012–2017
+
+::: {.panel-tabset}
+
+#### 2012
+
+```{r}
+#| label: ratio-2012
+plot_ratio(2012)
+```
+
+#### 2013
+
+```{r}
+#| label: ratio-2013
+plot_ratio(2013)
+```
+
+#### 2014
+
+```{r}
+#| label: ratio-2014
+plot_ratio(2014)
+```
+
+#### 2015
+
+```{r}
+#| label: ratio-2015
+plot_ratio(2015)
+```
+
+#### 2016
+
+```{r}
+#| label: ratio-2016
+plot_ratio(2016)
+```
+
+#### 2017
+
+```{r}
+#| label: ratio-2017
+plot_ratio(2017)
+```
+
+:::
+
+## Nested Data & Map: Ozone by Month
+
+Using nested data frames and `map_dbl()` to calculate average ozone by month — a functional programming pattern that avoids repetitive code.
+
+```{r}
+#| label: ozone-nested
+
+calc_mean <- function(data) {
+  mean(data$Ozone, na.rm = TRUE)
+}
+
+ozone_by_month <- function(df) {
+  df %>%
+    group_by(Month) %>%
+    nest() %>%
+    mutate(mean_ozone = map_dbl(data, calc_mean)) %>%
+    select(Month, mean_ozone) %>%
+    arrange(Month)
+}
+
+result <- ozone_by_month(airquality)
+
+result %>%
+  mutate(Month = recode(Month,
+    `5` = "May", `6` = "June", `7` = "July",
+    `8` = "August", `9` = "September"
+  )) %>%
+  gt() %>%
+  tab_header(
+    title = "Average Ozone by Month",
+    subtitle = "Computed using nested data frames and map_dbl()"
+  ) %>%
+  cols_label(Month = "Month", mean_ozone = "Mean Ozone (ppb)") %>%
+  fmt_number(columns = mean_ozone, decimals = 1)
+```
+
+```{r}
+#| label: ozone-viz
+#| fig-width: 8
+#| fig-height: 5
+
+result %>%
+  mutate(Month_name = recode(Month,
+    `5` = "May", `6` = "June", `7` = "July",
+    `8` = "August", `9` = "September"
+  )) %>%
+  ggplot(aes(x = fct_reorder(Month_name, mean_ozone), y = mean_ozone)) +
+  geom_col(fill = "#e67e22", alpha = 0.85) +
+  geom_text(aes(label = round(mean_ozone, 1)), hjust = -0.2, fontface = "bold") +
+  coord_flip() +
+  labs(
+    title = "Average Ozone Levels by Month",
+    subtitle = "July and August have the highest ozone concentrations",
+    x = "", y = "Mean Ozone (ppb)"
+  ) +
+  theme_minimal(base_size = 13) +
+  theme(plot.title = element_text(face = "bold")) +
+  expand_limits(y = max(result$mean_ozone) * 1.15)
+```
+
+**Key takeaway:** Functional programming in R — using nested data, custom functions, and `map()` — eliminates repetitive code and makes analyses reproducible and scalable.

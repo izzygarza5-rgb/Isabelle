@@ -3,7 +3,7 @@ title: "Projects"
 description: "Selected academic and applied work."
 ---
 
-This section is set up to showcase completed projects. Replace the placeholder summaries with the final project names, documents, images, or links.
+This section showcases completed projects from my academic coursework.
 
 ::: {.project-grid}
 ::: {.project-card}
@@ -42,3 +42,12 @@ Course project involving process thinking, operational decisions, efficiency, an
 <span class="tag">Operations</span>
 :::
 :::
+
+## Data Science Projects
+
+Detailed data science coursework with live R code and visualizations:
+
+- [Data Visualization in R](data-viz.qmd) — Scatter plots, bar charts, boxplots, correlation heatmaps, and interactive Plotly charts
+- [Data Wrangling with Tidyverse](data-wrangling.qmd) — NYC flights, religion/income reshaping, rent vs. income, missing values
+- [Advanced Data Visualization](advanced-viz.qmd) — Scales, composition, patchwork, gt tables, and design principles
+- [R Programming](r-programming.qmd) — Custom functions, apply/map, student-teacher ratios, and nested data analysis

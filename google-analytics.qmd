@@ -3,42 +3,57 @@ title: "Google Analytics"
 description: "Analytics coursework and measurement-focused work."
 ---
 
-This section is prepared for Google Analytics work samples such as reports, dashboards, certification evidence, or campaign measurement summaries.
+This section documents analytics coursework, Google Analytics work, and measurement-focused projects that support data-informed marketing and business decisions.
+
+## Analytics Coursework
 
 ::: {.project-grid}
 ::: {.project-card}
-### Website Traffic Report
+### Google Analytics Reporting
 
-Summary of audience, acquisition, engagement, and conversion behavior using Google Analytics reporting.
+Summary of audience, acquisition, engagement, and conversion behavior using Google Analytics reporting tools. Coursework focused on interpreting traffic patterns, identifying acquisition channels, and translating metrics into actionable business recommendations.
 
 <span class="tag">Google Analytics</span>
 <span class="tag">Reporting</span>
 :::
 
 ::: {.project-card}
-### Campaign Measurement Plan
+### Campaign Measurement Planning
 
-Measurement plan connecting marketing goals to KPIs, traffic sources, event tracking, and reporting cadence.
+Measurement plan connecting marketing goals to KPIs, traffic sources, event tracking, and reporting cadence. Developed frameworks for evaluating campaign performance and ROI across digital channels.
 
 <span class="tag">KPIs</span>
-<span class="tag">Campaigns</span>
+<span class="tag">Campaign Measurement</span>
 :::
 
 ::: {.project-card}
-### Analytics Insight Summary
+### Analytics Insight Summaries
 
-Short-form analysis translating data patterns into recommendations for marketing or website performance improvement.
+Short-form analysis translating data patterns into recommendations for marketing or website performance improvement. Practiced summarizing complex data into clear, actionable insights for non-technical stakeholders.
 
 <span class="tag">Insights</span>
 <span class="tag">Recommendations</span>
 :::
 
 ::: {.project-card}
-### Statistics and Business Analytics
+### Statistics & Business Analytics
 
-Coursework foundation for interpreting data, summarizing patterns, and supporting decisions with quantitative evidence.
+Foundational coursework covering descriptive statistics, probability, hypothesis testing, regression analysis, and their application to business decision-making.
 
 <span class="tag">STA 1205</span>
 <span class="tag">TOM 3020</span>
 :::
 :::
+
+## Data Science in R
+
+In addition to analytics tools like Google Analytics, I have applied R and the Tidyverse ecosystem for statistical analysis and data visualization. Key coursework pages on this site include:
+
+- [Data Visualization in R](data-viz.qmd) — ggplot2, plotly, correlation analysis, and interactive charts
+- [Data Wrangling with Tidyverse](data-wrangling.qmd) — Reshaping, cleaning, and transforming datasets
+- [Advanced Data Visualization](advanced-viz.qmd) — Scales, composition, annotation, and design principles
+- [R Programming](r-programming.qmd) — Custom functions, apply/map patterns, and functional programming
+
+## Certifications
+
+View my professional certifications with downloadable PDF certificates on the [Certifications](certifications.qmd) page.
