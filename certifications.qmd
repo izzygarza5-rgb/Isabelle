@@ -85,4 +85,74 @@ This section highlights my professional certifications and completed training.
 :::
 :::
 
+::: {.cert-card}
+![Getting Started with Google Analytics](certs/getting started w_ google cert-1.png){.cert-preview}
+
+::: {.cert-details}
+### Getting Started with Google Analytics
+
+**Skills:** Google Analytics, Data Analysis
+
+**Issuer:** Google
+
+[Download Certificate](certs/getting started w_ google cert-1.pdf){.btn .btn-primary download="getting-started-google-analytics.pdf"}
+:::
+:::
+
+::: {.cert-card}
+![Dive Deeper with Google Analytics](certs/dive deeper cert-2.png){.cert-preview}
+
+::: {.cert-details}
+### Dive Deeper with Google Analytics
+
+**Skills:** Google Analytics 4, Advanced Tracking
+
+**Issuer:** Google
+
+[Download Certificate](certs/dive deeper cert-2.pdf){.btn .btn-primary download="dive-deeper-google-analytics.pdf"}
+:::
+:::
+
+::: {.cert-card}
+![Manage Google Analytics 4](certs/manage GA4 cert-1.png){.cert-preview}
+
+::: {.cert-details}
+### Manage Google Analytics 4
+
+**Skills:** GA4 Management, Data Tracking
+
+**Issuer:** Google
+
+[Download Certificate](certs/manage GA4 cert-1.pdf){.btn .btn-primary download="manage-ga4.pdf"}
+:::
+:::
+
+::: {.cert-card}
+![Google Analytics Certification](certs/google analytics cert-1.png){.cert-preview}
+
+::: {.cert-details}
+### Google Analytics Certification
+
+**Skills:** GA4, Digital Analytics, Reporting
+
+**Issuer:** Google
+
+[Download Certificate](certs/google analytics cert-1.pdf){.btn .btn-primary download="google-analytics-certification.pdf"}
+:::
+:::
+
+::: {.cert-card}
+![Tools and Data Certification](certs/Tools and data cert (1).png){.cert-preview}
+
+::: {.cert-details}
+### Tools and Data Certification
+
+**Skills:** Data Tools, Analytics
+
+**Issuer:** Google
+
+[Download Certificate](certs/Tools and data cert (1).pdf){.btn .btn-primary download="tools-and-data.pdf"}
+:::
+:::
+
 :::
