@@ -1,0 +1,72 @@
+---
+title: "M12-Reflection Essay-Advanced R Programming"
+subtitle: "Revealjs Presentation"
+author: "Isabelle Garza"
+institute: "GBA 5910, Cal Poly Pomona"
+date: "`r Sys.Date()`"
+format: 
+  revealjs:
+    theme: league
+    width: 1600
+    height: 900
+    footer: Reflection on Advanced Programming in R
+    transition: slide
+    transition-speed: default
+    incremental: false
+    toc: true
+    toc-depth: 1
+    slide-number: true
+    scrollable: true
+    smaller: true
+    code-fold: false
+    code-overflow: wrap
+    number-sections: false
+    embed-resources: true
+    css: styles.css
+editor: visual
+execute: 
+  echo: true
+  freeze: auto
+---
+
+## Reducing Repetition with Functions
+
+Efficiency in programming is driven by reducing redundant code.
+
+-   **Abstraction**: Encapsulating logic into reusable functions.
+-   **Readability**: Making workflows easier for others (and future self) to follow.
+-   **The Rule of Three**: If you repeat a task three times, it's time to write a function.
+
+---
+
+## Functional Programming with {purrr}
+
+Replacing traditional loops with cleaner iteration using the `map()` family of functions.
+
+```{r}
+library(purrr)
+# Example: Computing means across multiple columns
+cols <- c("mpg", "hp", "wt")
+map_dbl(mtcars[cols], mean)
+```
+
+---
+
+## Dynamic Data Storytelling
+
+Moving beyond static dashboards to interactive and automated reporting.
+
+-   **Quarto Dashboards**: Combining code, text, and visuals in a single flexible document.
+-   **Parameterized Reporting**: Generating multiple report versions from a single template (e.g., by region or date).
+-   **Actionable Insights**: Focusing on clarity and targeted delivery to avoid dashboard fatigue.
+
+---
+
+## Learning Experience Summary
+
+The transition from "code that works" to "code that scales."
+
+### Challenges & Growth
+-   Mastering anonymous functions and functional pipelines.
+-   Structuring complex reports in Quarto.
+-   A shift in mindset towards automation and efficiency in the era of AI.

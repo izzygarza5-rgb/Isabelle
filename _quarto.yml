@@ -1,5 +1,13 @@
 project:
   type: website
+  output-dir: docs
+  render:
+    - "*.qmd"
+    - "!isabelle-m08-reflection.qmd"
+    - "!isabelle-m12-reflection.qmd"
+    - "!rendered/**"
+  resources:
+    - "rendered/**"
 
 website:
   title: "Isabelle Garza Portfolio"
@@ -28,6 +36,8 @@ website:
         text: Certifications
       - href: google-analytics.qmd
         text: Analytics
+      - href: presentations.qmd
+        text: Revealjs Presentations
       - href: resume.qmd
         text: Resume
       - href: about.qmd

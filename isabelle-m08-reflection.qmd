@@ -1,0 +1,73 @@
+---
+title: "M08-Reflection Essay-Advanced Data Types"
+subtitle: "Revealjs Presentation"
+author: "Isabelle Garza"
+institute: "GBA 5910, Cal Poly Pomona"
+date: "`r Sys.Date()`"
+format: 
+  revealjs:
+    theme: sky
+    width: 1600
+    height: 900
+    footer: Advanced Data Types
+    transition: slide
+    transition-speed: default
+    incremental: false
+    toc: true
+    toc-depth: 1
+    slide-number: true
+    scrollable: true
+    smaller: true
+    code-fold: false
+    code-overflow: wrap
+    number-sections: false
+    embed-resources: true
+    css: styles.css
+editor: visual
+execute: 
+  echo: true
+  freeze: auto
+---
+
+## Managing Data Complexity with R
+
+In this module, we explored how to handle various data types efficiently using specialized R packages.
+
+Three essential functions for data wrangling:
+
+-   `str_detect()`: Identifying patterns in character strings for filtering.
+-   `ymd()`: Converting inconsistent date text into standardized date objects.
+-   `fct_reorder()`: Managing categorical data by reordering factor levels based on numeric values.
+
+---
+
+## Date-Time Handling Strategies
+
+Handling date-time data is often one of the most complex tasks in data science.
+
+### Key Insights
+-   Standardizing formats early prevents downstream errors.
+-   Extracting components (year, month, day) allows for granular temporal analysis.
+-   `lubridate` provides a grammatical approach to time-based transformations.
+
+---
+
+## The Power of {gtsummary}
+
+The `{gtsummary}` package bridges the gap between raw data analysis and professional communication.
+
+### Capabilities
+-   **Statistical Summaries**: Automatic mean, median, and count reporting.
+-   **Model Outputs**: Integrating regression results directly into tables.
+-   **Publication Ready**: Removing the need for manual formatting in external editors.
+
+---
+
+## Reflections on Wrangling
+
+> "Data wrangling is like laying a foundation for a building; visualization is the structure above."
+
+### Final Thoughts
+-   Behind-the-scenes work determines the accuracy of the final narrative.
+-   Mastering factors and strings provides total control over analytical outputs.
+-   Efficient code reduces repetition and improves reproducibility.
