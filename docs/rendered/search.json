@@ -1,0 +1,114 @@
+[
+  {
+    "objectID": "m04-reflection-slides.html#the-grammar-of-graphics",
+    "href": "m04-reflection-slides.html#the-grammar-of-graphics",
+    "title": "Advanced Data Visualization Strategies",
+    "section": "The Grammar of Graphics",
+    "text": "The Grammar of Graphics\n\n“Plots are not monolithic final products, but composable objects built from reusable parts.”\n\n\nRooted in the philosophy of treating visualizations as structured layers.\nSeparating data, aesthetics, geoms, and guides.\nUnlocks the power of the ggplot2 ecosystem."
+  },
+  {
+    "objectID": "m04-reflection-slides.html#composing-with-patchwork",
+    "href": "m04-reflection-slides.html#composing-with-patchwork",
+    "title": "Advanced Data Visualization Strategies",
+    "section": "Composing with Patchwork",
+    "text": "Composing with Patchwork\n\npatchwork provides a grammatical way to compose multiple plots.\nEnsures a single, coherent narrative.\nExample: Combining linear vs log scales for comparison."
+  },
+  {
+    "objectID": "m04-reflection-slides.html#animation-dynamics",
+    "href": "m04-reflection-slides.html#animation-dynamics",
+    "title": "Advanced Data Visualization Strategies",
+    "section": "Animation & Dynamics",
+    "text": "Animation & Dynamics\n\ngganimate adds a time dimension to the plot.\nA logical extension of the grammar of graphics.\nTransforms static insights into interactive stories."
+  },
+  {
+    "objectID": "m04-reflection-slides.html#visual-design-principles",
+    "href": "m04-reflection-slides.html#visual-design-principles",
+    "title": "Advanced Data Visualization Strategies",
+    "section": "Visual Design Principles",
+    "text": "Visual Design Principles\n\nClarity over Complexity: Edit ruthlessly to ensure every element has a purpose.\nIntentional Annotation: Guide the eye without distraction.\nTypography & Space: Creating clear visual hierarchy."
+  },
+  {
+    "objectID": "m08-reflection-slides.html#core-data-structures-in-r",
+    "href": "m08-reflection-slides.html#core-data-structures-in-r",
+    "title": "Mastering R Data Types",
+    "section": "Core Data Structures in R",
+    "text": "Core Data Structures in R\n\nAtomic Vectors: The building blocks (Numeric, Character, Logical).\nLists: Flexible containers for heterogeneous data.\nData Frames: Tabular data where each column is a vector."
+  },
+  {
+    "objectID": "m08-reflection-slides.html#working-with-factors",
+    "href": "m08-reflection-slides.html#working-with-factors",
+    "title": "Mastering R Data Types",
+    "section": "Working with Factors",
+    "text": "Working with Factors\n\nEssential for categorical data analysis.\nforcats package for reordering levels.\nEnsures plots and summaries reflect underlying patterns."
+  },
+  {
+    "objectID": "m08-reflection-slides.html#string-date-time-manipulation",
+    "href": "m08-reflection-slides.html#string-date-time-manipulation",
+    "title": "Mastering R Data Types",
+    "section": "String & Date-Time Manipulation",
+    "text": "String & Date-Time Manipulation\n\nStringr: Powerful tools for text processing (e.g., word()).\nLubridate: Simplifying the “nightmare” of date-time data.\nCreating datetime objects from components with make_datetime()."
+  },
+  {
+    "objectID": "m08-reflection-slides.html#applied-data-wrangling",
+    "href": "m08-reflection-slides.html#applied-data-wrangling",
+    "title": "Mastering R Data Types",
+    "section": "Applied Data Wrangling",
+    "text": "Applied Data Wrangling\n\nUsing dplyr for filtering, counting, and summarizing.\nReshaping data for visualization.\nTransforming raw inputs into analytical insights."
+  },
+  {
+    "objectID": "isabelle-m08-reflection.html#managing-data-complexity-with-r",
+    "href": "isabelle-m08-reflection.html#managing-data-complexity-with-r",
+    "title": "M08-Reflection Essay-Advanced Data Types",
+    "section": "Managing Data Complexity with R",
+    "text": "Managing Data Complexity with R\nIn this module, we explored how to handle various data types efficiently using specialized R packages.\nThree essential functions for data wrangling:\n\nstr_detect(): Identifying patterns in character strings for filtering.\nymd(): Converting inconsistent date text into standardized date objects.\nfct_reorder(): Managing categorical data by reordering factor levels based on numeric values."
+  },
+  {
+    "objectID": "isabelle-m08-reflection.html#date-time-handling-strategies",
+    "href": "isabelle-m08-reflection.html#date-time-handling-strategies",
+    "title": "M08-Reflection Essay-Advanced Data Types",
+    "section": "Date-Time Handling Strategies",
+    "text": "Date-Time Handling Strategies\nHandling date-time data is often one of the most complex tasks in data science.\nKey Insights\n\nStandardizing formats early prevents downstream errors.\nExtracting components (year, month, day) allows for granular temporal analysis.\nlubridate provides a grammatical approach to time-based transformations."
+  },
+  {
+    "objectID": "isabelle-m08-reflection.html#the-power-of-gtsummary",
+    "href": "isabelle-m08-reflection.html#the-power-of-gtsummary",
+    "title": "M08-Reflection Essay-Advanced Data Types",
+    "section": "The Power of {gtsummary}",
+    "text": "The Power of {gtsummary}\nThe {gtsummary} package bridges the gap between raw data analysis and professional communication.\nCapabilities\n\nStatistical Summaries: Automatic mean, median, and count reporting.\nModel Outputs: Integrating regression results directly into tables.\nPublication Ready: Removing the need for manual formatting in external editors."
+  },
+  {
+    "objectID": "isabelle-m08-reflection.html#reflections-on-wrangling",
+    "href": "isabelle-m08-reflection.html#reflections-on-wrangling",
+    "title": "M08-Reflection Essay-Advanced Data Types",
+    "section": "Reflections on Wrangling",
+    "text": "Reflections on Wrangling\n\n“Data wrangling is like laying a foundation for a building; visualization is the structure above.”\n\nFinal Thoughts\n\nBehind-the-scenes work determines the accuracy of the final narrative.\nMastering factors and strings provides total control over analytical outputs.\nEfficient code reduces repetition and improves reproducibility."
+  },
+  {
+    "objectID": "isabelle-m12-reflection.html#reducing-repetition-with-functions",
+    "href": "isabelle-m12-reflection.html#reducing-repetition-with-functions",
+    "title": "M12-Reflection Essay-Advanced R Programming",
+    "section": "Reducing Repetition with Functions",
+    "text": "Reducing Repetition with Functions\nEfficiency in programming is driven by reducing redundant code.\n\nAbstraction: Encapsulating logic into reusable functions.\nReadability: Making workflows easier for others (and future self) to follow.\nThe Rule of Three: If you repeat a task three times, it’s time to write a function."
+  },
+  {
+    "objectID": "isabelle-m12-reflection.html#functional-programming-with-purrr",
+    "href": "isabelle-m12-reflection.html#functional-programming-with-purrr",
+    "title": "M12-Reflection Essay-Advanced R Programming",
+    "section": "Functional Programming with {purrr}",
+    "text": "Functional Programming with {purrr}\nReplacing traditional loops with cleaner iteration using the map() family of functions.\n\nlibrary(purrr)\n# Example: Computing means across multiple columns\ncols &lt;- c(\"mpg\", \"hp\", \"wt\")\nmap_dbl(mtcars[cols], mean)\n\n      mpg        hp        wt \n 20.09062 146.68750   3.21725"
+  },
+  {
+    "objectID": "isabelle-m12-reflection.html#dynamic-data-storytelling",
+    "href": "isabelle-m12-reflection.html#dynamic-data-storytelling",
+    "title": "M12-Reflection Essay-Advanced R Programming",
+    "section": "Dynamic Data Storytelling",
+    "text": "Dynamic Data Storytelling\nMoving beyond static dashboards to interactive and automated reporting.\n\nQuarto Dashboards: Combining code, text, and visuals in a single flexible document.\nParameterized Reporting: Generating multiple report versions from a single template (e.g., by region or date).\nActionable Insights: Focusing on clarity and targeted delivery to avoid dashboard fatigue."
+  },
+  {
+    "objectID": "isabelle-m12-reflection.html#learning-experience-summary",
+    "href": "isabelle-m12-reflection.html#learning-experience-summary",
+    "title": "M12-Reflection Essay-Advanced R Programming",
+    "section": "Learning Experience Summary",
+    "text": "Learning Experience Summary\nThe transition from “code that works” to “code that scales.”\nChallenges & Growth\n\nMastering anonymous functions and functional pipelines.\nStructuring complex reports in Quarto.\nA shift in mindset towards automation and efficiency in the era of AI."
+  }
+]
