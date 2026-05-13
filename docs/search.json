@@ -84,235 +84,46 @@
     "text": "Data Science Projects\nDetailed data science coursework with live R code and visualizations:\n\nData Visualization in R — Scatter plots, bar charts, boxplots, correlation heatmaps, and interactive Plotly charts\nData Wrangling with Tidyverse — NYC flights, religion/income reshaping, rent vs. income, missing values\nAdvanced Data Visualization — Scales, composition, patchwork, gt tables, and design principles\nR Programming — Custom functions, apply/map, student-teacher ratios, and nested data analysis"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Student Portfolio",
+    "objectID": "marketing-projects.html",
+    "href": "marketing-projects.html",
+    "title": "Marketing Projects",
     "section": "",
-    "text": "Student Portfolio\n\n\n\nI’m a business, marketing, and analytics student at Cal Poly Pomona building a portfolio that highlights my data science projects, R programming skills, marketing strategy work, SAP enterprise system experience, and professional certifications in Tableau and Excel. I bring strong communication, leadership, and teamwork skills alongside hands-on experience with Python, RStudio, ggplot2, and data-informed decision making.\n\nView Resume Data Science Work See Projects"
+    "text": "Marketing work is organized around strategy, research, promotion, selling, and customer behavior."
   },
   {
-    "objectID": "index.html#focus-areas",
-    "href": "index.html#focus-areas",
-    "title": "Student Portfolio",
-    "section": "Focus Areas",
-    "text": "Focus Areas\n\n\nData Science & R Programming\nI build data visualizations with ggplot2, wrangle datasets using the Tidyverse, create interactive plots with Plotly, and apply functional programming patterns to real-world data analysis in R.\n\n\nMarketing Strategy\nI connect my coursework and projects to promotional strategy, consumer behavior, marketing research, and persuasive communication through campaign planning and market analysis.\n\n\nAnalytics & Business Intelligence\nI apply Google Analytics, Tableau, Excel PivotTables, business analytics, and statistical methods to make data-informed recommendations."
+    "objectID": "marketing-projects.html#related-courses",
+    "href": "marketing-projects.html#related-courses",
+    "title": "Marketing Projects",
+    "section": "Related Courses",
+    "text": "Related Courses\n\nPrinciples of Marketing Mgmt\nProfessional Selling\nPromotional Strategies\nMarket Analysis and Control\nMarketing Research\nConsumer Behavior"
   },
   {
-    "objectID": "index.html#portfolio-snapshot",
-    "href": "index.html#portfolio-snapshot",
-    "title": "Student Portfolio",
-    "section": "Portfolio Snapshot",
-    "text": "Portfolio Snapshot\n\n\n43\nCourses completed\n\n\n4\nSAP modules completed\n\n\n3\nProfessional certifications"
-  },
-  {
-    "objectID": "index.html#featured-work",
-    "href": "index.html#featured-work",
-    "title": "Student Portfolio",
-    "section": "Featured Work",
-    "text": "Featured Work\n\n\nData Visualization in R\nScatter plots, bar charts, boxplots, correlation heatmaps, and interactive Plotly visualizations built with ggplot2 and the Wooldridge attendance dataset.\nOpen section\n\n\nData Wrangling with Tidyverse\nData reshaping, pivot operations, missing value handling, and multi-dataset analysis using dplyr, tidyr, and ggplot2 on NYC flights, air quality, and census data.\nOpen section\n\n\nSAP & Enterprise Projects\nHands-on SAP work across Financial Accounting, Sales & Distribution, Materials Management, and Production Planning modules.\nOpen section\n\n\nMarketing Projects\nCampaign planning, promotional strategies, consumer behavior analysis, and research-based marketing recommendations.\nOpen section\n\n\nR Programming & Functions\nCustom functions, apply/map patterns, nested data analysis, and automated chart generation for student-teacher ratio data across multiple years.\nOpen section\n\n\nAnalytics & Certifications\nTableau 2024.1, Excel PivotTables, Google Analytics reporting, and statistical coursework foundations.\nOpen section"
-  },
-  {
-    "objectID": "data-wrangling.html",
-    "href": "data-wrangling.html",
-    "title": "Data Wrangling with Tidyverse",
+    "objectID": "google-analytics.html",
+    "href": "google-analytics.html",
+    "title": "Google Analytics",
     "section": "",
-    "text": "This page demonstrates data wrangling techniques using the Tidyverse in R. The exercises cover filtering, reshaping, pivoting, handling missing values, and combining data wrangling with visualization — applied to real datasets including airquality, nycflights13, relig_income, and us_rent_income."
+    "text": "This section documents analytics coursework, Google Analytics work, and measurement-focused projects that support data-informed marketing and business decisions."
   },
   {
-    "objectID": "data-wrangling.html#air-quality-data-filtering-and-selection",
-    "href": "data-wrangling.html#air-quality-data-filtering-and-selection",
-    "title": "Data Wrangling with Tidyverse",
-    "section": "Air Quality Data: Filtering and Selection",
-    "text": "Air Quality Data: Filtering and Selection\nWorking with R’s built-in airquality dataset to demonstrate both Tidyverse and base R approaches to data extraction.\n\n\nShow code\nair.tib &lt;- as_tibble(airquality)\n\n# Tidyverse approach: filter and select\nair.tib %&gt;%\n  filter(Temp == 97) %&gt;%\n  select(Ozone)\n\n\n# A tibble: 1 × 1\n  Ozone\n  &lt;int&gt;\n1    76"
+    "objectID": "google-analytics.html#analytics-coursework",
+    "href": "google-analytics.html#analytics-coursework",
+    "title": "Google Analytics",
+    "section": "Analytics Coursework",
+    "text": "Analytics Coursework\n\n\nGoogle Analytics Reporting\nSummary of audience, acquisition, engagement, and conversion behavior using Google Analytics reporting tools. Coursework focused on interpreting traffic patterns, identifying acquisition channels, and translating metrics into actionable business recommendations.\nGoogle Analytics Reporting\n\n\nCampaign Measurement Planning\nMeasurement plan connecting marketing goals to KPIs, traffic sources, event tracking, and reporting cadence. Developed frameworks for evaluating campaign performance and ROI across digital channels.\nKPIs Campaign Measurement\n\n\nAnalytics Insight Summaries\nShort-form analysis translating data patterns into recommendations for marketing or website performance improvement. Practiced summarizing complex data into clear, actionable insights for non-technical stakeholders.\nInsights Recommendations\n\n\nStatistics & Business Analytics\nFoundational coursework covering descriptive statistics, probability, hypothesis testing, regression analysis, and their application to business decision-making.\nSTA 1205 TOM 3020"
   },
   {
-    "objectID": "data-wrangling.html#nyc-flights-worst-arrival-delays",
-    "href": "data-wrangling.html#nyc-flights-worst-arrival-delays",
-    "title": "Data Wrangling with Tidyverse",
-    "section": "NYC Flights: Worst Arrival Delays",
-    "text": "NYC Flights: Worst Arrival Delays\nIdentifying the 10 worst daily arrival delays across all of 2013, then averaging them by month to reveal seasonal patterns.\n\n\nShow code\nlibrary(nycflights13)\n\nworst_delays &lt;- flights %&gt;%\n  drop_na(arr_delay) %&gt;%\n  group_by(year, month, day) %&gt;%\n  slice_max(arr_delay, n = 10, with_ties = FALSE) %&gt;%\n  ungroup() %&gt;%\n  group_by(month) %&gt;%\n  summarise(avg_worst_delay = mean(arr_delay))\n\nggplot(worst_delays, aes(x = factor(month), y = avg_worst_delay)) +\n  geom_col(fill = \"#3498db\", alpha = 0.85) +\n  labs(\n    title = \"Average of the 10 Worst Daily Arrival Delays by Month\",\n    subtitle = \"NYC flights, 2013 — extreme delays are surprisingly consistent across months\",\n    x = \"Month\", y = \"Average Delay (minutes)\"\n  ) +\n  theme_minimal(base_size = 13) +\n  theme(plot.title = element_text(face = \"bold\"))\n\n\n\n\n\n\n\n\n\nInsight: The average of the most extreme arrival delays remains relatively stable across months, with no dramatic seasonal pattern, suggesting that factors causing very large delays are not strongly tied to the time of year."
+    "objectID": "google-analytics.html#data-science-in-r",
+    "href": "google-analytics.html#data-science-in-r",
+    "title": "Google Analytics",
+    "section": "Data Science in R",
+    "text": "Data Science in R\nIn addition to analytics tools like Google Analytics, I have applied R and the Tidyverse ecosystem for statistical analysis and data visualization. Key coursework pages on this site include:\n\nData Visualization in R — ggplot2, plotly, correlation analysis, and interactive charts\nData Wrangling with Tidyverse — Reshaping, cleaning, and transforming datasets\nAdvanced Data Visualization — Scales, composition, annotation, and design principles\nR Programming — Custom functions, apply/map patterns, and functional programming"
   },
   {
-    "objectID": "data-wrangling.html#reshaping-data-religion-and-income",
-    "href": "data-wrangling.html#reshaping-data-religion-and-income",
-    "title": "Data Wrangling with Tidyverse",
-    "section": "Reshaping Data: Religion and Income",
-    "text": "Reshaping Data: Religion and Income\nTransforming the relig_income dataset from wide to long format for visualization, then creating a grouped bar chart showing income distributions across religious affiliations.\n\n\nShow code\nrelig_long &lt;- relig_income %&gt;%\n  pivot_longer(-religion, names_to = \"income\", values_to = \"count\") %&gt;%\n  filter(income != \"Don't know/refused\")\n\nggplot(relig_long, aes(x = religion, y = count, fill = income)) +\n  geom_col(position = position_dodge(preserve = \"single\")) +\n  scale_fill_viridis_d() +\n  labs(\n    title = \"Income Distribution by Religious Affiliation\",\n    subtitle = \"Data reshaped from wide to long format using pivot_longer()\",\n    x = \"Religion\", y = \"Number of Respondents\", fill = \"Income Bracket\"\n  ) +\n  theme_minimal(base_size = 11) +\n  theme(\n    axis.text.x = element_text(angle = 45, hjust = 1, size = 9),\n    plot.title = element_text(face = \"bold\"),\n    legend.position = \"bottom\"\n  )"
-  },
-  {
-    "objectID": "data-wrangling.html#rent-vs.-income-pivot-wider",
-    "href": "data-wrangling.html#rent-vs.-income-pivot-wider",
-    "title": "Data Wrangling with Tidyverse",
-    "section": "Rent vs. Income: Pivot Wider",
-    "text": "Rent vs. Income: Pivot Wider\nUsing pivot_wider() to reshape the us_rent_income dataset and explore the relationship between median income and median rent across US states.\n\n\nShow code\nus_rent_income %&gt;%\n  pivot_wider(names_from = variable, values_from = c(estimate, moe)) %&gt;%\n  ggplot(aes(x = estimate_income, y = estimate_rent)) +\n  geom_point(color = \"#27ae60\", size = 2.5, alpha = 0.7) +\n  geom_smooth(method = \"lm\", se = FALSE, color = \"#e74c3c\", linewidth = 1.2) +\n  labs(\n    title = \"Median Income vs. Median Rent Across US States\",\n    subtitle = \"Strong positive relationship — higher income states have higher rents\",\n    x = \"Median Income ($)\", y = \"Median Rent ($)\"\n  ) +\n  theme_minimal(base_size = 13) +\n  theme(plot.title = element_text(face = \"bold\"))"
-  },
-  {
-    "objectID": "data-wrangling.html#handling-missing-values",
-    "href": "data-wrangling.html#handling-missing-values",
-    "title": "Data Wrangling with Tidyverse",
-    "section": "Handling Missing Values",
-    "text": "Handling Missing Values\nDemonstrating multiple strategies for identifying and replacing missing values in the airquality dataset using mean imputation.\n\n\nShow code\nair.tib &lt;- as_tibble(airquality)\n\n# Missing value summary\nmissing_summary &lt;- air.tib %&gt;%\n  summarise(\n    missing_n = sum(is.na(Solar.R)),\n    missing_pct = round(mean(is.na(Solar.R)) * 100, 1)\n  )\n\nmissing_summary %&gt;%\n  gt() %&gt;%\n  cols_label(missing_n = \"Missing Count\", missing_pct = \"Missing %\") %&gt;%\n  tab_header(title = \"Solar Radiation: Missing Value Summary\")\n\n\n\n\n\n\n\n\nSolar Radiation: Missing Value Summary\n\n\nMissing Count\nMissing %\n\n\n\n\n7\n4.6\n\n\n\n\n\n\n\n\n\nShow code\n# Compute rounded mean for imputation\nsolar_mean_rounded &lt;- air.tib %&gt;%\n  summarise(avg = round(mean(Solar.R, na.rm = TRUE))) %&gt;%\n  pull(avg)\n\n# Replace NAs with mean\nair.tib &lt;- air.tib %&gt;%\n  mutate(Solar.R = if_else(is.na(Solar.R), solar_mean_rounded, Solar.R))\n\n# Verify\npaste(\"Remaining NAs in Solar.R:\", sum(is.na(air.tib$Solar.R)))\n\n\n[1] \"Remaining NAs in Solar.R: 0\""
-  },
-  {
-    "objectID": "data-wrangling.html#temperature-analysis-by-month",
-    "href": "data-wrangling.html#temperature-analysis-by-month",
-    "title": "Data Wrangling with Tidyverse",
-    "section": "Temperature Analysis by Month",
-    "text": "Temperature Analysis by Month\nAggregating temperature data by month and visualizing it with ordered bar charts.\n\nTotal TemperatureMaximum Temperature\n\n\n\n\nShow code\nair.tib %&gt;%\n  mutate(Month_name = case_when(\n    Month == 5 ~ \"May\", Month == 6 ~ \"June\", Month == 7 ~ \"July\",\n    Month == 8 ~ \"August\", Month == 9 ~ \"September\"\n  )) %&gt;%\n  group_by(Month_name) %&gt;%\n  summarise(total_temp = sum(Temp, na.rm = TRUE)) %&gt;%\n  ggplot(aes(x = total_temp, y = fct_reorder(Month_name, total_temp))) +\n  geom_col(fill = \"#e74c3c\", alpha = 0.85) +\n  labs(title = \"Total Recorded Temperature by Month\", x = \"Total Temperature\", y = \"\") +\n  theme_minimal(base_size = 13) +\n  theme(plot.title = element_text(face = \"bold\"))\n\n\n\n\n\n\n\n\n\n\n\n\n\nShow code\nair.tib %&gt;%\n  group_by(Month) %&gt;%\n  summarise(max_temp = max(Temp, na.rm = TRUE)) %&gt;%\n  mutate(Month = recode(Month, `5` = \"May\", `6` = \"June\", `7` = \"July\",\n                               `8` = \"August\", `9` = \"September\")) %&gt;%\n  ggplot(aes(x = max_temp, y = fct_reorder(Month, max_temp))) +\n  geom_col(fill = \"#f39c12\", alpha = 0.85) +\n  labs(title = \"Highest Temperature by Month\", x = \"Maximum Temperature (°F)\", y = \"\") +\n  theme_minimal(base_size = 13) +\n  theme(plot.title = element_text(face = \"bold\"))"
-  },
-  {
-    "objectID": "data-wrangling.html#multivariate-exploration-ozone-relationships",
-    "href": "data-wrangling.html#multivariate-exploration-ozone-relationships",
-    "title": "Data Wrangling with Tidyverse",
-    "section": "Multivariate Exploration: Ozone Relationships",
-    "text": "Multivariate Exploration: Ozone Relationships\nExploring how temperature, wind speed, and their ratio relate to ozone levels using faceted scatter plots.\n\n\nShow code\nair.tib %&gt;%\n  mutate(temp_wind = Temp / Wind) %&gt;%\n  pivot_longer(cols = c(Temp, Wind, temp_wind),\n               names_to = \"variable\",\n               values_to = \"value\") %&gt;%\n  ggplot(aes(x = value, y = Ozone)) +\n  geom_point(alpha = 0.5, color = \"#3498db\", size = 1.8) +\n  geom_smooth(method = \"lm\", se = FALSE, color = \"#e74c3c\", linewidth = 1) +\n  facet_wrap(~variable, scales = \"free_x\") +\n  labs(\n    title = \"Ozone vs. Temperature, Wind, and Their Ratio\",\n    subtitle = \"Temperature drives ozone up; wind drives it down\",\n    x = \"Variable Value\", y = \"Ozone (ppb)\"\n  ) +\n  theme_minimal(base_size = 13) +\n  theme(\n    plot.title = element_text(face = \"bold\"),\n    strip.text = element_text(face = \"bold\")\n  )\n\n\n\n\n\n\n\n\n\nConclusion: Ozone is positively associated with temperature and negatively associated with wind speed. The ratio Temp/Wind does not reveal a strong linear relationship, indicating that the individual effects of temperature and wind are more informative than their simple quotient."
-  },
-  {
-    "objectID": "data-wrangling.html#top-destinations-from-nyc",
-    "href": "data-wrangling.html#top-destinations-from-nyc",
-    "title": "Data Wrangling with Tidyverse",
-    "section": "Top Destinations from NYC",
-    "text": "Top Destinations from NYC\nA quick analysis of flight volumes to identify the most popular destinations from New York City airports.\n\n\nShow code\nflights %&gt;%\n  count(dest, sort = TRUE) %&gt;%\n  slice_head(n = 10) %&gt;%\n  gt() %&gt;%\n  cols_label(dest = \"Destination\", n = \"Number of Flights\") %&gt;%\n  tab_header(\n    title = \"Top 10 Destinations from NYC\",\n    subtitle = \"2013 flight data from nycflights13\"\n  ) %&gt;%\n  fmt_number(columns = n, use_seps = TRUE, decimals = 0)\n\n\n\n\n\n\n\n\nTop 10 Destinations from NYC\n\n\n2013 flight data from nycflights13\n\n\nDestination\nNumber of Flights\n\n\n\n\nORD\n17,283\n\n\nATL\n17,215\n\n\nLAX\n16,174\n\n\nBOS\n15,508\n\n\nMCO\n14,082\n\n\nCLT\n14,064\n\n\nSFO\n13,331\n\n\nFLL\n12,055\n\n\nMIA\n11,728\n\n\nDCA\n9,705"
-  },
-  {
-    "objectID": "coursework.html",
-    "href": "coursework.html",
-    "title": "Coursework",
-    "section": "",
-    "text": "The coursework below documents completed classes across business, marketing, analytics, communication, finance, management, and general education."
-  },
-  {
-    "objectID": "coursework.html#marketing-and-business-analytics",
-    "href": "coursework.html#marketing-and-business-analytics",
-    "title": "Coursework",
-    "section": "Marketing and Business Analytics",
-    "text": "Marketing and Business Analytics\n\n\n\nCode\nCourse\n\n\n\n\nIBM 3012\nPrinciples of Marketing Mgmt\n\n\nIBM 3062\nProfessional Selling\n\n\nIBM 3072\nPromotional Strategies\n\n\nIBM 3202\nMarket Analysis and Control\n\n\nIBM 3302\nMarketing Research\n\n\nIBM 4112\nConsumer Behavior\n\n\nTOM 3020\nStatistical Fndtn Bus Analytic\n\n\nSTA 1205\nStats w/Applications w/Support\n\n\nSTA 1205A\nStats w/Applications w/Sup Act"
-  },
-  {
-    "objectID": "coursework.html#business-management-finance-and-economics",
-    "href": "coursework.html#business-management-finance-and-economics",
-    "title": "Coursework",
-    "section": "Business, Management, Finance, and Economics",
-    "text": "Business, Management, Finance, and Economics\n\n\n\nCode\nCourse\n\n\n\n\nACC 2070\nFin Acc For Decision Making\n\n\nACC 2080\nMngr Acc For Decision Making\n\n\nBUS 2500\nApplied Business Communication\n\n\nCIS 1010\nIntro to Personal Computing\n\n\nCIS 3100\nManagement Information Systems\n\n\nEC 2201\nPrinciples of Microeconomics\n\n\nEC 2202\nPrinciples of Macroeconomics\n\n\nFRL 2013\nLegal Env of Bus and its Txn\n\n\nFRL 3000\nManagerial Finance\n\n\nMHR 3010\nPrinciples of Management\n\n\nMHR 3020\nOrganizational Behavior\n\n\nTOM 3010\nOperations Management"
-  },
-  {
-    "objectID": "coursework.html#communication-humanities-and-social-sciences",
-    "href": "coursework.html#communication-humanities-and-social-sciences",
-    "title": "Coursework",
-    "section": "Communication, Humanities, and Social Sciences",
-    "text": "Communication, Humanities, and Social Sciences\n\n\n\nCode\nCourse\n\n\n\n\nAG 1110\nAG Foundation of Civilizations\n\n\nCOM 2204\nAdvocacy and Argument\n\n\nENG 1103\nFirst Year Composition\n\n\nEWS 2011\nAfrican American Hstrcl Exprnc\n\n\nHST 2201\nUnited States History to 1877\n\n\nHST 4406\nHst Wmn, Gndr, & Sxlty in US\n\n\nMU 1010\nMusic Appreciation\n\n\nPHL 2020\nCritical Thinking\n\n\nPHL 2040\nEthical Prob in Contemp Life\n\n\nPLS 2010\nIntro to American Government\n\n\nPSY 2201\nIntroduction to Psychology"
-  },
-  {
-    "objectID": "coursework.html#science-math-wellness-and-student-success",
-    "href": "coursework.html#science-math-wellness-and-student-success",
-    "title": "Coursework",
-    "section": "Science, Math, Wellness, and Student Success",
-    "text": "Science, Math, Wellness, and Student Success\n\n\n\nCode\nCourse\n\n\n\n\nBIO 1150\nBiology and Society\n\n\nBIO 1150L\nBiology and Society Laboratory\n\n\nGSC 1160\nIntroduction to Astronomy\n\n\nKIN 3010\nFoundations of Exercise Scienc\n\n\nLS 1020\nKnwldg Lrning Engmnt Success\n\n\nMAT 1250\nIntro Calculus for Business\n\n\nIBM 2000\nSpec Study for LD Students"
-  },
-  {
-    "objectID": "coursework.html#full-course-list",
-    "href": "coursework.html#full-course-list",
-    "title": "Coursework",
-    "section": "Full Course List",
-    "text": "Full Course List\n\n\n\n\nCode\n\n\nCourse\n\n\n\n\n\n\nACC 2070\n\n\nFin Acc For Decision Making\n\n\n\n\nACC 2080\n\n\nMngr Acc For Decision Making\n\n\n\n\nAG 1110\n\n\nAG Foundation of Civilizations\n\n\n\n\nBIO 1150\n\n\nBiology and Society\n\n\n\n\nBIO 1150L\n\n\nBiology and Society Laboratory\n\n\n\n\nBUS 2500\n\n\nApplied Business Communication\n\n\n\n\nCIS 1010\n\n\nIntro to Personal Computing\n\n\n\n\nCIS 3100\n\n\nManagement Information Systems\n\n\n\n\nCOM 2204\n\n\nAdvocacy and Argument\n\n\n\n\nEC 2201\n\n\nPrinciples of Microeconomics\n\n\n\n\nEC 2202\n\n\nPrinciples of Macroeconomics\n\n\n\n\nENG 1103\n\n\nFirst Year Composition\n\n\n\n\nEWS 2011\n\n\nAfrican American Hstrcl Exprnc\n\n\n\n\nFRL 2013\n\n\nLegal Env of Bus and its Txn\n\n\n\n\nFRL 3000\n\n\nManagerial Finance\n\n\n\n\nGSC 1160\n\n\nIntroduction to Astronomy\n\n\n\n\nHST 2201\n\n\nUnited States History to 1877\n\n\n\n\nHST 4406\n\n\nHst Wmn, Gndr, & Sxlty in US\n\n\n\n\nIBM 2000\n\n\nSpec Study for LD Students\n\n\n\n\nIBM 3012\n\n\nPrinciples of Marketing Mgmt\n\n\n\n\nIBM 3062\n\n\nProfessional Selling\n\n\n\n\nIBM 3072\n\n\nPromotional Strategies\n\n\n\n\nIBM 3202\n\n\nMarket Analysis and Control\n\n\n\n\nIBM 3302\n\n\nMarketing Research\n\n\n\n\nIBM 4112\n\n\nConsumer Behavior\n\n\n\n\nKIN 3010\n\n\nFoundations of Exercise Scienc\n\n\n\n\nLS 1020\n\n\nKnwldg Lrning Engmnt Success\n\n\n\n\nMAT 1250\n\n\nIntro Calculus for Business\n\n\n\n\nMHR 3010\n\n\nPrinciples of Management\n\n\n\n\nMHR 3020\n\n\nOrganizational Behavior\n\n\n\n\nMU 1010\n\n\nMusic Appreciation\n\n\n\n\nPHL 2020\n\n\nCritical Thinking\n\n\n\n\nPHL 2040\n\n\nEthical Prob in Contemp Life\n\n\n\n\nPLS 2010\n\n\nIntro to American Government\n\n\n\n\nPSY 2201\n\n\nIntroduction to Psychology\n\n\n\n\nSTA 1205\n\n\nStats w/Applications w/Support\n\n\n\n\nSTA 1205A\n\n\nStats w/Applications w/Sup Act\n\n\n\n\nTOM 3010\n\n\nOperations Management\n\n\n\n\nTOM 3020\n\n\nStatistical Fndtn Bus Analytic"
-  },
-  {
-    "objectID": "advanced-viz.html",
-    "href": "advanced-viz.html",
-    "title": "Advanced Data Visualization",
-    "section": "",
-    "text": "This page documents reflections on advanced data visualization principles and demonstrates key techniques learned through workshops by Thomas Lin Pedersen, David Robinson, and Cédric Scherer, as well as the gt and gtExtras table packages."
-  },
-  {
-    "objectID": "advanced-viz.html#the-grammar-of-graphics",
-    "href": "advanced-viz.html#the-grammar-of-graphics",
-    "title": "Advanced Data Visualization",
-    "section": "The Grammar of Graphics",
-    "text": "The Grammar of Graphics\nThe workshop by Thomas Lin Pedersen was transformative. The core insight was to treat plots not as monolithic final products, but as composable objects built from reusable parts. This philosophy, rooted in the grammar of graphics, demystifies complexity.\n\nBy consciously separating data, aesthetics, geoms, and guides, even the most intricate visualizations become manageable."
-  },
-  {
-    "objectID": "advanced-viz.html#scales-and-transformations",
-    "href": "advanced-viz.html#scales-and-transformations",
-    "title": "Advanced Data Visualization",
-    "section": "Scales and Transformations",
-    "text": "Scales and Transformations\nScales are the critical translators between your data and your audience. A plot’s ability to communicate honestly and effectively hinges on scale choices.\n\n\nShow code\ndf &lt;- data.frame(\n  category = c(\"A\", \"B\", \"C\"),\n  value = c(10, 20, 1000)\n)\n\np1 &lt;- ggplot(df, aes(x = category, y = value)) +\n  geom_col(fill = \"#3498db\", alpha = 0.85) +\n  labs(title = \"Linear Scale\", subtitle = \"Outlier dominates the view\") +\n  theme_minimal(base_size = 13) +\n  theme(plot.title = element_text(face = \"bold\"))\n\np2 &lt;- ggplot(df, aes(x = category, y = value)) +\n  geom_col(fill = \"#e74c3c\", alpha = 0.85) +\n  scale_y_log10() +\n  labs(title = \"Log10 Scale\", subtitle = \"Relative differences revealed\") +\n  theme_minimal(base_size = 13) +\n  theme(plot.title = element_text(face = \"bold\"))\n\np1 + p2\n\n\n\n\n\n\n\n\n\nThe same data tells a completely different story depending on the scale. Linear scales can hide small but meaningful differences when outliers are present, while log scales reveal relative proportions."
-  },
-  {
-    "objectID": "advanced-viz.html#three-essential-functions",
-    "href": "advanced-viz.html#three-essential-functions",
-    "title": "Advanced Data Visualization",
-    "section": "Three Essential Functions",
-    "text": "Three Essential Functions\nFrom David Robinson’s impromptu data visualization workflow, three functions stood out as essential for rapid exploratory analysis:\n\ndplyr::count() — Quick Frequency Analysis\n\n\nShow code\nmpg %&gt;%\n  count(class) %&gt;%\n  ggplot(aes(x = reorder(class, n), y = n)) +\n  geom_col(fill = \"#2ecc71\", alpha = 0.85) +\n  coord_flip() +\n  labs(\n    title = \"Vehicle Class Distribution\",\n    subtitle = \"count() provides instant frequency summaries\",\n    x = \"Car Class\", y = \"Count\"\n  ) +\n  theme_minimal(base_size = 13) +\n  theme(plot.title = element_text(face = \"bold\"))\n\n\n\n\n\n\n\n\n\n\n\ntidyr::separate() — Splitting Combined Fields\n\n\nShow code\nmessy_df &lt;- data.frame(id = 1:3, info = c(\"Model_A_Red\", \"Model_B_Blue\", \"Model_C_Green\"))\n\nclean_df &lt;- messy_df %&gt;%\n  separate(info, into = c(\"prefix\", \"model\", \"color\"), sep = \"_\")\n\nclean_df %&gt;%\n  gt() %&gt;%\n  tab_header(title = \"Cleaned Data with separate()\")\n\n\n\n\n\n\n\n\nCleaned Data with separate()\n\n\nid\nprefix\nmodel\ncolor\n\n\n\n\n1\nModel\nA\nRed\n\n\n2\nModel\nB\nBlue\n\n\n3\nModel\nC\nGreen\n\n\n\n\n\n\n\n\n\nforcats::fct_reorder() — Meaningful Ordering\n\n\nShow code\nmpg %&gt;%\n  mutate(class = fct_reorder(class, hwy, .fun = median)) %&gt;%\n  ggplot(aes(x = class, y = hwy)) +\n  geom_boxplot(fill = \"#9b59b6\", alpha = 0.6) +\n  coord_flip() +\n  labs(\n    title = \"Highway MPG by Car Class\",\n    subtitle = \"Ordered by median MPG using fct_reorder() — patterns jump out\",\n    x = \"Car Class\", y = \"Highway MPG\"\n  ) +\n  theme_minimal(base_size = 13) +\n  theme(plot.title = element_text(face = \"bold\"))"
-  },
-  {
-    "objectID": "advanced-viz.html#tables-as-data-products",
-    "href": "advanced-viz.html#tables-as-data-products",
-    "title": "Advanced Data Visualization",
-    "section": "Tables as Data Products",
-    "text": "Tables as Data Products\nThe gt package redefined my perception of tables. A table can be more than a crude printout — it can be a sophisticated data product with its own visual appeal.\n\n\nShow code\nmtcars %&gt;%\n  group_by(cyl) %&gt;%\n  summarize(\n    n = n(),\n    avg_mpg = round(mean(mpg), 1),\n    avg_hp = round(mean(hp), 0),\n    avg_wt = round(mean(wt), 2),\n    .groups = \"drop\"\n  ) %&gt;%\n  gt() %&gt;%\n  tab_header(\n    title = \"Engine Performance Summary\",\n    subtitle = \"Grouped by number of cylinders\"\n  ) %&gt;%\n  cols_label(\n    cyl = \"Cylinders\",\n    n = \"Count\",\n    avg_mpg = \"Avg MPG\",\n    avg_hp = \"Avg HP\",\n    avg_wt = \"Avg Weight (tons)\"\n  )\n\n\n\n\n\n\n\n\nEngine Performance Summary\n\n\nGrouped by number of cylinders\n\n\nCylinders\nCount\nAvg MPG\nAvg HP\nAvg Weight (tons)\n\n\n\n\n4\n11\n26.7\n83\n2.29\n\n\n6\n7\n19.7\n122\n3.12\n\n\n8\n14\n15.1\n209\n4.00\n\n\n\n\n\n\n\n\nWhile charts excel at showing patterns, tables are superior for presenting exact values. The combination of gt’s formatting rigor and the ability to embed mini visuals means a single table can communicate trend, spread, and precise figures simultaneously."
-  },
-  {
-    "objectID": "advanced-viz.html#design-principles-from-cédric-scherer",
-    "href": "advanced-viz.html#design-principles-from-cédric-scherer",
-    "title": "Advanced Data Visualization",
-    "section": "Design Principles from Cédric Scherer",
-    "text": "Design Principles from Cédric Scherer\nThree key principles for intentional, effective data visualization:\n\nUse perceptually uniform palettes — Palettes like Viridis ensure that changes in color value are perceived as equal changes in data value, without introducing false visual emphasis.\nRefine typography and space — Consistent font sizes, adjusted margins, and lighter gridlines create a clear visual hierarchy that guides the viewer’s eye without distraction.\nPractice intentional annotation — Annotate sparingly. Highlight the two or three key data points, and let the rest of the data speak for itself."
-  },
-  {
-    "objectID": "advanced-viz.html#life-expectancy-top-and-bottom-5-in-asia",
-    "href": "advanced-viz.html#life-expectancy-top-and-bottom-5-in-asia",
-    "title": "Advanced Data Visualization",
-    "section": "Life Expectancy: Top and Bottom 5 in Asia",
-    "text": "Life Expectancy: Top and Bottom 5 in Asia\nUsing patchwork to compose multiple plots into a single, coherent narrative.\n\n\nShow code\nlibrary(gapminder)\n\nasia_2007 &lt;- gapminder %&gt;%\n  filter(year == 2007, continent == \"Asia\")\n\ntop5 &lt;- asia_2007 %&gt;% slice_max(lifeExp, n = 5)\nbottom5 &lt;- asia_2007 %&gt;% slice_min(lifeExp, n = 5)\n\np1 &lt;- ggplot(top5, aes(x = reorder(country, lifeExp), y = lifeExp)) +\n  geom_col(fill = \"#2ecc71\", alpha = 0.85) +\n  coord_flip() +\n  labs(title = \"Top 5 Life Expectancy\", x = \"\", y = \"Life Expectancy (years)\") +\n  theme_minimal(base_size = 13) +\n  theme(plot.title = element_text(face = \"bold\"))\n\np2 &lt;- ggplot(bottom5, aes(x = reorder(country, lifeExp), y = lifeExp)) +\n  geom_col(fill = \"#e74c3c\", alpha = 0.85) +\n  coord_flip() +\n  labs(title = \"Bottom 5 Life Expectancy\", x = \"\", y = \"Life Expectancy (years)\") +\n  theme_minimal(base_size = 13) +\n  theme(plot.title = element_text(face = \"bold\"))\n\np1 + p2 +\n  plot_annotation(\n    title = \"Life Expectancy in Asia (2007)\",\n    subtitle = \"Composed with patchwork — comparing extremes side by side\",\n    theme = theme(\n      plot.title = element_text(face = \"bold\", size = 16),\n      plot.subtitle = element_text(color = \"gray40\")\n    )\n  )"
-  },
-  {
-    "objectID": "advanced-viz.html#reflections-on-mastering-data-visualization",
-    "href": "advanced-viz.html#reflections-on-mastering-data-visualization",
-    "title": "Advanced Data Visualization",
-    "section": "Reflections on Mastering Data Visualization",
-    "text": "Reflections on Mastering Data Visualization\nChallenges identified: Balancing creativity and clarity, managing the many ggplot2 details that govern scales, themes, and layering. Moving beyond simple charts can feel overwhelming.\nPlan to overcome: Execute every new technique in small loops — keep it simple, add one change, and re-read the message. Maintain a short checklist based on module objectives covering correlations, multi-variable layers, animation, and maps. Recreate one plot from tutorials each week to build confidence through practice."
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "I’m Isabelle Garza, a business, marketing, and analytics student at California State Polytechnic University, Pomona. I’m passionate about building a portfolio that brings together my academic and applied work across data science, marketing strategy, enterprise systems, and business analytics."
-  },
-  {
-    "objectID": "about.html#academic-profile",
-    "href": "about.html#academic-profile",
-    "title": "About",
-    "section": "Academic Profile",
-    "text": "Academic Profile\nMy coursework reflects a broad business education with emphasis in marketing management, promotional strategy, consumer behavior, market analysis, business analytics, finance, management information systems, and communication. I have completed hands-on work with:\n\nR & the Tidyverse — Data visualization with ggplot2, data wrangling with dplyr/tidyr, interactive visualizations with Plotly, functional programming with purrr\nSAP Enterprise Systems — Financial Accounting (FI), Sales & Distribution (SD), Materials Management (MM), and Production Planning (PP)\nAnalytics Tools — Tableau 2024.1, Excel PivotTables, Google Analytics, and statistical analysis\nProgramming — Python fundamentals, R programming, and data-driven decision making"
-  },
-  {
-    "objectID": "about.html#what-this-site-includes",
-    "href": "about.html#what-this-site-includes",
-    "title": "About",
-    "section": "What This Site Includes",
-    "text": "What This Site Includes\n\nData Science Work — Complete R-based projects with live visualizations including scatter plots, bar charts, boxplots, correlation heatmaps, and interactive Plotly charts\nProject Summaries — SAP enterprise system work, production planning reports, and business case analyses\nMarketing Projects — Campaign planning, consumer behavior analysis, and promotional strategy\nCertifications — LinkedIn Learning and NASBA certifications in Tableau and Excel PivotTables\nComplete Coursework — 43 courses across business, marketing, analytics, and general education"
-  },
-  {
-    "objectID": "about.html#leadership-community",
-    "href": "about.html#leadership-community",
-    "title": "About",
-    "section": "Leadership & Community",
-    "text": "Leadership & Community\nBeyond academics, I serve as a leader in my community through:\n\nZeta Tau Alpha — Contributing to philanthropic efforts centered around breast cancer education and awareness\nTeam Captain — Leading and mentoring team members at Corona del Mar High School\nBest Buddies — Supporting inclusion programs for individuals with intellectual and developmental disabilities\nOrange County Food Bank — Volunteering in food distribution and community outreach"
-  },
-  {
-    "objectID": "about.html#languages",
-    "href": "about.html#languages",
-    "title": "About",
-    "section": "Languages",
-    "text": "Languages\n\nEnglish — Fluent\nSpanish — Intermediate Proficiency\nAmerican Sign Language (ASL) — Intermediate Proficiency"
-  },
-  {
-    "objectID": "certifications.html",
-    "href": "certifications.html",
-    "title": "Certifications",
-    "section": "",
-    "text": "This section highlights my professional certifications and completed training.\n\n\n\n\n\n\nGetting Started with Google Analytics\n\n\n\nGetting Started with Google Analytics\nSkills: Google Analytics, Data Analysis\nIssuer: Google\nDownload Certificate\n\n\n\n\n\n\nDive Deeper with Google Analytics\n\n\n\nDive Deeper with Google Analytics\nSkills: Google Analytics 4, Advanced Tracking\nIssuer: Google\nDownload Certificate\n\n\n\n\n\n\nManage Google Analytics 4\n\n\n\nManage Google Analytics 4\nSkills: GA4 Management, Data Tracking\nIssuer: Google\nDownload Certificate\n\n\n\n\n\n\nGoogle Analytics Certification\n\n\n\nGoogle Analytics Certification\nSkills: GA4, Digital Analytics, Reporting\nIssuer: Google\nDownload Certificate\n\n\n\n\n\n\nTools and Data Certification\n\n\n\nTools and Data Certification\nSkills: Data Tools, Analytics\nIssuer: Google\nDownload Certificate"
+    "objectID": "google-analytics.html#certifications",
+    "href": "google-analytics.html#certifications",
+    "title": "Google Analytics",
+    "section": "Certifications",
+    "text": "Certifications\nView my professional certifications with downloadable PDF certificates on the Certifications page."
   },
   {
     "objectID": "data-viz.html",
@@ -378,46 +189,242 @@
     "text": "Interactive Visualization\nUsing plotly to create an interactive scatter plot that allows exploration of the relationship between prior GPA and term GPA.\n\n\nShow code\ndf_soph_labeled &lt;- df %&gt;%\n  mutate(soph_label = factor(soph, levels = c(0, 1),\n                              labels = c(\"Not Sophomore\", \"Sophomore\")))\n\nscatter_plt &lt;- ggplot(df_soph_labeled, aes(x = priGPA, y = termGPA, color = soph_label)) +\n  geom_point(alpha = 0.4) +\n  geom_smooth(method = \"lm\", se = FALSE) +\n  scale_color_manual(values = c(\"Not Sophomore\" = \"#e74c3c\", \"Sophomore\" = \"#2c3e50\")) +\n  labs(\n    title = \"Prior GPA vs. Term GPA\",\n    subtitle = \"Interactive — hover to explore individual data points\",\n    x = \"Prior GPA\", y = \"Term GPA\", color = \"Status\"\n  ) +\n  theme_minimal(base_size = 13)\n\nggplotly(scatter_plt, tooltip = c(\"x\", \"y\", \"color\"))\n\n\n\n\n\n\nA strong positive relationship exists between prior and current GPA across both class levels, demonstrating academic consistency regardless of sophomore status."
   },
   {
-    "objectID": "google-analytics.html",
-    "href": "google-analytics.html",
-    "title": "Google Analytics",
+    "objectID": "certifications.html",
+    "href": "certifications.html",
+    "title": "Certifications",
     "section": "",
-    "text": "This section documents analytics coursework, Google Analytics work, and measurement-focused projects that support data-informed marketing and business decisions."
+    "text": "This section highlights my professional certifications and completed training.\n\n\n\n\n\n\nGetting Started with Google Analytics\n\n\n\nGetting Started with Google Analytics\nSkills: Google Analytics, Data Analysis\nIssuer: Google\nDownload Certificate\n\n\n\n\n\n\nDive Deeper with Google Analytics\n\n\n\nDive Deeper with Google Analytics\nSkills: Google Analytics 4, Advanced Tracking\nIssuer: Google\nDownload Certificate\n\n\n\n\n\n\nManage Google Analytics 4\n\n\n\nManage Google Analytics 4\nSkills: GA4 Management, Data Tracking\nIssuer: Google\nDownload Certificate\n\n\n\n\n\n\nGoogle Analytics Certification\n\n\n\nGoogle Analytics Certification\nSkills: GA4, Digital Analytics, Reporting\nIssuer: Google\nDownload Certificate\n\n\n\n\n\n\nTools and Data Certification\n\n\n\nTools and Data Certification\nSkills: Data Tools, Analytics\nIssuer: Google\nDownload Certificate"
   },
   {
-    "objectID": "google-analytics.html#analytics-coursework",
-    "href": "google-analytics.html#analytics-coursework",
-    "title": "Google Analytics",
-    "section": "Analytics Coursework",
-    "text": "Analytics Coursework\n\n\nGoogle Analytics Reporting\nSummary of audience, acquisition, engagement, and conversion behavior using Google Analytics reporting tools. Coursework focused on interpreting traffic patterns, identifying acquisition channels, and translating metrics into actionable business recommendations.\nGoogle Analytics Reporting\n\n\nCampaign Measurement Planning\nMeasurement plan connecting marketing goals to KPIs, traffic sources, event tracking, and reporting cadence. Developed frameworks for evaluating campaign performance and ROI across digital channels.\nKPIs Campaign Measurement\n\n\nAnalytics Insight Summaries\nShort-form analysis translating data patterns into recommendations for marketing or website performance improvement. Practiced summarizing complex data into clear, actionable insights for non-technical stakeholders.\nInsights Recommendations\n\n\nStatistics & Business Analytics\nFoundational coursework covering descriptive statistics, probability, hypothesis testing, regression analysis, and their application to business decision-making.\nSTA 1205 TOM 3020"
-  },
-  {
-    "objectID": "google-analytics.html#data-science-in-r",
-    "href": "google-analytics.html#data-science-in-r",
-    "title": "Google Analytics",
-    "section": "Data Science in R",
-    "text": "Data Science in R\nIn addition to analytics tools like Google Analytics, I have applied R and the Tidyverse ecosystem for statistical analysis and data visualization. Key coursework pages on this site include:\n\nData Visualization in R — ggplot2, plotly, correlation analysis, and interactive charts\nData Wrangling with Tidyverse — Reshaping, cleaning, and transforming datasets\nAdvanced Data Visualization — Scales, composition, annotation, and design principles\nR Programming — Custom functions, apply/map patterns, and functional programming"
-  },
-  {
-    "objectID": "google-analytics.html#certifications",
-    "href": "google-analytics.html#certifications",
-    "title": "Google Analytics",
-    "section": "Certifications",
-    "text": "Certifications\nView my professional certifications with downloadable PDF certificates on the Certifications page."
-  },
-  {
-    "objectID": "marketing-projects.html",
-    "href": "marketing-projects.html",
-    "title": "Marketing Projects",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
     "section": "",
-    "text": "Marketing work is organized around strategy, research, promotion, selling, and customer behavior."
+    "text": "I’m Isabelle Garza, a business, marketing, and analytics student at California State Polytechnic University, Pomona. I’m passionate about building a portfolio that brings together my academic and applied work across data science, marketing strategy, enterprise systems, and business analytics."
   },
   {
-    "objectID": "marketing-projects.html#related-courses",
-    "href": "marketing-projects.html#related-courses",
-    "title": "Marketing Projects",
-    "section": "Related Courses",
-    "text": "Related Courses\n\nPrinciples of Marketing Mgmt\nProfessional Selling\nPromotional Strategies\nMarket Analysis and Control\nMarketing Research\nConsumer Behavior"
+    "objectID": "about.html#academic-profile",
+    "href": "about.html#academic-profile",
+    "title": "About",
+    "section": "Academic Profile",
+    "text": "Academic Profile\nMy coursework reflects a broad business education with emphasis in marketing management, promotional strategy, consumer behavior, market analysis, business analytics, finance, management information systems, and communication. I have completed hands-on work with:\n\nR & the Tidyverse — Data visualization with ggplot2, data wrangling with dplyr/tidyr, interactive visualizations with Plotly, functional programming with purrr\nSAP Enterprise Systems — Financial Accounting (FI), Sales & Distribution (SD), Materials Management (MM), and Production Planning (PP)\nAnalytics Tools — Tableau 2024.1, Excel PivotTables, Google Analytics, and statistical analysis\nProgramming — Python fundamentals, R programming, and data-driven decision making"
+  },
+  {
+    "objectID": "about.html#what-this-site-includes",
+    "href": "about.html#what-this-site-includes",
+    "title": "About",
+    "section": "What This Site Includes",
+    "text": "What This Site Includes\n\nData Science Work — Complete R-based projects with live visualizations including scatter plots, bar charts, boxplots, correlation heatmaps, and interactive Plotly charts\nProject Summaries — SAP enterprise system work, production planning reports, and business case analyses\nMarketing Projects — Campaign planning, consumer behavior analysis, and promotional strategy\nCertifications — LinkedIn Learning and NASBA certifications in Tableau and Excel PivotTables\nComplete Coursework — 43 courses across business, marketing, analytics, and general education"
+  },
+  {
+    "objectID": "about.html#leadership-community",
+    "href": "about.html#leadership-community",
+    "title": "About",
+    "section": "Leadership & Community",
+    "text": "Leadership & Community\nBeyond academics, I serve as a leader in my community through:\n\nZeta Tau Alpha — Contributing to philanthropic efforts centered around breast cancer education and awareness\nTeam Captain — Leading and mentoring team members at Corona del Mar High School\nBest Buddies — Supporting inclusion programs for individuals with intellectual and developmental disabilities\nOrange County Food Bank — Volunteering in food distribution and community outreach"
+  },
+  {
+    "objectID": "about.html#languages",
+    "href": "about.html#languages",
+    "title": "About",
+    "section": "Languages",
+    "text": "Languages\n\nEnglish — Fluent\nSpanish — Intermediate Proficiency\nAmerican Sign Language (ASL) — Intermediate Proficiency"
+  },
+  {
+    "objectID": "advanced-viz.html",
+    "href": "advanced-viz.html",
+    "title": "Advanced Data Visualization",
+    "section": "",
+    "text": "This page documents reflections on advanced data visualization principles and demonstrates key techniques learned through workshops by Thomas Lin Pedersen, David Robinson, and Cédric Scherer, as well as the gt and gtExtras table packages."
+  },
+  {
+    "objectID": "advanced-viz.html#the-grammar-of-graphics",
+    "href": "advanced-viz.html#the-grammar-of-graphics",
+    "title": "Advanced Data Visualization",
+    "section": "The Grammar of Graphics",
+    "text": "The Grammar of Graphics\nThe workshop by Thomas Lin Pedersen was transformative. The core insight was to treat plots not as monolithic final products, but as composable objects built from reusable parts. This philosophy, rooted in the grammar of graphics, demystifies complexity.\n\nBy consciously separating data, aesthetics, geoms, and guides, even the most intricate visualizations become manageable."
+  },
+  {
+    "objectID": "advanced-viz.html#scales-and-transformations",
+    "href": "advanced-viz.html#scales-and-transformations",
+    "title": "Advanced Data Visualization",
+    "section": "Scales and Transformations",
+    "text": "Scales and Transformations\nScales are the critical translators between your data and your audience. A plot’s ability to communicate honestly and effectively hinges on scale choices.\n\n\nShow code\ndf &lt;- data.frame(\n  category = c(\"A\", \"B\", \"C\"),\n  value = c(10, 20, 1000)\n)\n\np1 &lt;- ggplot(df, aes(x = category, y = value)) +\n  geom_col(fill = \"#3498db\", alpha = 0.85) +\n  labs(title = \"Linear Scale\", subtitle = \"Outlier dominates the view\") +\n  theme_minimal(base_size = 13) +\n  theme(plot.title = element_text(face = \"bold\"))\n\np2 &lt;- ggplot(df, aes(x = category, y = value)) +\n  geom_col(fill = \"#e74c3c\", alpha = 0.85) +\n  scale_y_log10() +\n  labs(title = \"Log10 Scale\", subtitle = \"Relative differences revealed\") +\n  theme_minimal(base_size = 13) +\n  theme(plot.title = element_text(face = \"bold\"))\n\np1 + p2\n\n\n\n\n\n\n\n\n\nThe same data tells a completely different story depending on the scale. Linear scales can hide small but meaningful differences when outliers are present, while log scales reveal relative proportions."
+  },
+  {
+    "objectID": "advanced-viz.html#three-essential-functions",
+    "href": "advanced-viz.html#three-essential-functions",
+    "title": "Advanced Data Visualization",
+    "section": "Three Essential Functions",
+    "text": "Three Essential Functions\nFrom David Robinson’s impromptu data visualization workflow, three functions stood out as essential for rapid exploratory analysis:\n\ndplyr::count() — Quick Frequency Analysis\n\n\nShow code\nmpg %&gt;%\n  count(class) %&gt;%\n  ggplot(aes(x = reorder(class, n), y = n)) +\n  geom_col(fill = \"#2ecc71\", alpha = 0.85) +\n  coord_flip() +\n  labs(\n    title = \"Vehicle Class Distribution\",\n    subtitle = \"count() provides instant frequency summaries\",\n    x = \"Car Class\", y = \"Count\"\n  ) +\n  theme_minimal(base_size = 13) +\n  theme(plot.title = element_text(face = \"bold\"))\n\n\n\n\n\n\n\n\n\n\n\ntidyr::separate() — Splitting Combined Fields\n\n\nShow code\nmessy_df &lt;- data.frame(id = 1:3, info = c(\"Model_A_Red\", \"Model_B_Blue\", \"Model_C_Green\"))\n\nclean_df &lt;- messy_df %&gt;%\n  separate(info, into = c(\"prefix\", \"model\", \"color\"), sep = \"_\")\n\nclean_df %&gt;%\n  gt() %&gt;%\n  tab_header(title = \"Cleaned Data with separate()\")\n\n\n\n\n\n\n\n\nCleaned Data with separate()\n\n\nid\nprefix\nmodel\ncolor\n\n\n\n\n1\nModel\nA\nRed\n\n\n2\nModel\nB\nBlue\n\n\n3\nModel\nC\nGreen\n\n\n\n\n\n\n\n\n\nforcats::fct_reorder() — Meaningful Ordering\n\n\nShow code\nmpg %&gt;%\n  mutate(class = fct_reorder(class, hwy, .fun = median)) %&gt;%\n  ggplot(aes(x = class, y = hwy)) +\n  geom_boxplot(fill = \"#9b59b6\", alpha = 0.6) +\n  coord_flip() +\n  labs(\n    title = \"Highway MPG by Car Class\",\n    subtitle = \"Ordered by median MPG using fct_reorder() — patterns jump out\",\n    x = \"Car Class\", y = \"Highway MPG\"\n  ) +\n  theme_minimal(base_size = 13) +\n  theme(plot.title = element_text(face = \"bold\"))"
+  },
+  {
+    "objectID": "advanced-viz.html#tables-as-data-products",
+    "href": "advanced-viz.html#tables-as-data-products",
+    "title": "Advanced Data Visualization",
+    "section": "Tables as Data Products",
+    "text": "Tables as Data Products\nThe gt package redefined my perception of tables. A table can be more than a crude printout — it can be a sophisticated data product with its own visual appeal.\n\n\nShow code\nmtcars %&gt;%\n  group_by(cyl) %&gt;%\n  summarize(\n    n = n(),\n    avg_mpg = round(mean(mpg), 1),\n    avg_hp = round(mean(hp), 0),\n    avg_wt = round(mean(wt), 2),\n    .groups = \"drop\"\n  ) %&gt;%\n  gt() %&gt;%\n  tab_header(\n    title = \"Engine Performance Summary\",\n    subtitle = \"Grouped by number of cylinders\"\n  ) %&gt;%\n  cols_label(\n    cyl = \"Cylinders\",\n    n = \"Count\",\n    avg_mpg = \"Avg MPG\",\n    avg_hp = \"Avg HP\",\n    avg_wt = \"Avg Weight (tons)\"\n  )\n\n\n\n\n\n\n\n\nEngine Performance Summary\n\n\nGrouped by number of cylinders\n\n\nCylinders\nCount\nAvg MPG\nAvg HP\nAvg Weight (tons)\n\n\n\n\n4\n11\n26.7\n83\n2.29\n\n\n6\n7\n19.7\n122\n3.12\n\n\n8\n14\n15.1\n209\n4.00\n\n\n\n\n\n\n\n\nWhile charts excel at showing patterns, tables are superior for presenting exact values. The combination of gt’s formatting rigor and the ability to embed mini visuals means a single table can communicate trend, spread, and precise figures simultaneously."
+  },
+  {
+    "objectID": "advanced-viz.html#design-principles-from-cédric-scherer",
+    "href": "advanced-viz.html#design-principles-from-cédric-scherer",
+    "title": "Advanced Data Visualization",
+    "section": "Design Principles from Cédric Scherer",
+    "text": "Design Principles from Cédric Scherer\nThree key principles for intentional, effective data visualization:\n\nUse perceptually uniform palettes — Palettes like Viridis ensure that changes in color value are perceived as equal changes in data value, without introducing false visual emphasis.\nRefine typography and space — Consistent font sizes, adjusted margins, and lighter gridlines create a clear visual hierarchy that guides the viewer’s eye without distraction.\nPractice intentional annotation — Annotate sparingly. Highlight the two or three key data points, and let the rest of the data speak for itself."
+  },
+  {
+    "objectID": "advanced-viz.html#life-expectancy-top-and-bottom-5-in-asia",
+    "href": "advanced-viz.html#life-expectancy-top-and-bottom-5-in-asia",
+    "title": "Advanced Data Visualization",
+    "section": "Life Expectancy: Top and Bottom 5 in Asia",
+    "text": "Life Expectancy: Top and Bottom 5 in Asia\nUsing patchwork to compose multiple plots into a single, coherent narrative.\n\n\nShow code\nlibrary(gapminder)\n\nasia_2007 &lt;- gapminder %&gt;%\n  filter(year == 2007, continent == \"Asia\")\n\ntop5 &lt;- asia_2007 %&gt;% slice_max(lifeExp, n = 5)\nbottom5 &lt;- asia_2007 %&gt;% slice_min(lifeExp, n = 5)\n\np1 &lt;- ggplot(top5, aes(x = reorder(country, lifeExp), y = lifeExp)) +\n  geom_col(fill = \"#2ecc71\", alpha = 0.85) +\n  coord_flip() +\n  labs(title = \"Top 5 Life Expectancy\", x = \"\", y = \"Life Expectancy (years)\") +\n  theme_minimal(base_size = 13) +\n  theme(plot.title = element_text(face = \"bold\"))\n\np2 &lt;- ggplot(bottom5, aes(x = reorder(country, lifeExp), y = lifeExp)) +\n  geom_col(fill = \"#e74c3c\", alpha = 0.85) +\n  coord_flip() +\n  labs(title = \"Bottom 5 Life Expectancy\", x = \"\", y = \"Life Expectancy (years)\") +\n  theme_minimal(base_size = 13) +\n  theme(plot.title = element_text(face = \"bold\"))\n\np1 + p2 +\n  plot_annotation(\n    title = \"Life Expectancy in Asia (2007)\",\n    subtitle = \"Composed with patchwork — comparing extremes side by side\",\n    theme = theme(\n      plot.title = element_text(face = \"bold\", size = 16),\n      plot.subtitle = element_text(color = \"gray40\")\n    )\n  )"
+  },
+  {
+    "objectID": "advanced-viz.html#reflections-on-mastering-data-visualization",
+    "href": "advanced-viz.html#reflections-on-mastering-data-visualization",
+    "title": "Advanced Data Visualization",
+    "section": "Reflections on Mastering Data Visualization",
+    "text": "Reflections on Mastering Data Visualization\nChallenges identified: Balancing creativity and clarity, managing the many ggplot2 details that govern scales, themes, and layering. Moving beyond simple charts can feel overwhelming.\nPlan to overcome: Execute every new technique in small loops — keep it simple, add one change, and re-read the message. Maintain a short checklist based on module objectives covering correlations, multi-variable layers, animation, and maps. Recreate one plot from tutorials each week to build confidence through practice."
+  },
+  {
+    "objectID": "coursework.html",
+    "href": "coursework.html",
+    "title": "Coursework",
+    "section": "",
+    "text": "The coursework below documents completed classes across business, marketing, analytics, communication, finance, management, and general education."
+  },
+  {
+    "objectID": "coursework.html#marketing-and-business-analytics",
+    "href": "coursework.html#marketing-and-business-analytics",
+    "title": "Coursework",
+    "section": "Marketing and Business Analytics",
+    "text": "Marketing and Business Analytics\n\n\n\nCode\nCourse\n\n\n\n\nIBM 3012\nPrinciples of Marketing Mgmt\n\n\nIBM 3062\nProfessional Selling\n\n\nIBM 3072\nPromotional Strategies\n\n\nIBM 3202\nMarket Analysis and Control\n\n\nIBM 3302\nMarketing Research\n\n\nIBM 4112\nConsumer Behavior\n\n\nTOM 3020\nStatistical Fndtn Bus Analytic\n\n\nSTA 1205\nStats w/Applications w/Support\n\n\nSTA 1205A\nStats w/Applications w/Sup Act"
+  },
+  {
+    "objectID": "coursework.html#business-management-finance-and-economics",
+    "href": "coursework.html#business-management-finance-and-economics",
+    "title": "Coursework",
+    "section": "Business, Management, Finance, and Economics",
+    "text": "Business, Management, Finance, and Economics\n\n\n\nCode\nCourse\n\n\n\n\nACC 2070\nFin Acc For Decision Making\n\n\nACC 2080\nMngr Acc For Decision Making\n\n\nBUS 2500\nApplied Business Communication\n\n\nCIS 1010\nIntro to Personal Computing\n\n\nCIS 3100\nManagement Information Systems\n\n\nEC 2201\nPrinciples of Microeconomics\n\n\nEC 2202\nPrinciples of Macroeconomics\n\n\nFRL 2013\nLegal Env of Bus and its Txn\n\n\nFRL 3000\nManagerial Finance\n\n\nMHR 3010\nPrinciples of Management\n\n\nMHR 3020\nOrganizational Behavior\n\n\nTOM 3010\nOperations Management"
+  },
+  {
+    "objectID": "coursework.html#communication-humanities-and-social-sciences",
+    "href": "coursework.html#communication-humanities-and-social-sciences",
+    "title": "Coursework",
+    "section": "Communication, Humanities, and Social Sciences",
+    "text": "Communication, Humanities, and Social Sciences\n\n\n\nCode\nCourse\n\n\n\n\nAG 1110\nAG Foundation of Civilizations\n\n\nCOM 2204\nAdvocacy and Argument\n\n\nENG 1103\nFirst Year Composition\n\n\nEWS 2011\nAfrican American Hstrcl Exprnc\n\n\nHST 2201\nUnited States History to 1877\n\n\nHST 4406\nHst Wmn, Gndr, & Sxlty in US\n\n\nMU 1010\nMusic Appreciation\n\n\nPHL 2020\nCritical Thinking\n\n\nPHL 2040\nEthical Prob in Contemp Life\n\n\nPLS 2010\nIntro to American Government\n\n\nPSY 2201\nIntroduction to Psychology"
+  },
+  {
+    "objectID": "coursework.html#science-math-wellness-and-student-success",
+    "href": "coursework.html#science-math-wellness-and-student-success",
+    "title": "Coursework",
+    "section": "Science, Math, Wellness, and Student Success",
+    "text": "Science, Math, Wellness, and Student Success\n\n\n\nCode\nCourse\n\n\n\n\nBIO 1150\nBiology and Society\n\n\nBIO 1150L\nBiology and Society Laboratory\n\n\nGSC 1160\nIntroduction to Astronomy\n\n\nKIN 3010\nFoundations of Exercise Scienc\n\n\nLS 1020\nKnwldg Lrning Engmnt Success\n\n\nMAT 1250\nIntro Calculus for Business\n\n\nIBM 2000\nSpec Study for LD Students"
+  },
+  {
+    "objectID": "coursework.html#full-course-list",
+    "href": "coursework.html#full-course-list",
+    "title": "Coursework",
+    "section": "Full Course List",
+    "text": "Full Course List\n\n\n\n\nCode\n\n\nCourse\n\n\n\n\n\n\nACC 2070\n\n\nFin Acc For Decision Making\n\n\n\n\nACC 2080\n\n\nMngr Acc For Decision Making\n\n\n\n\nAG 1110\n\n\nAG Foundation of Civilizations\n\n\n\n\nBIO 1150\n\n\nBiology and Society\n\n\n\n\nBIO 1150L\n\n\nBiology and Society Laboratory\n\n\n\n\nBUS 2500\n\n\nApplied Business Communication\n\n\n\n\nCIS 1010\n\n\nIntro to Personal Computing\n\n\n\n\nCIS 3100\n\n\nManagement Information Systems\n\n\n\n\nCOM 2204\n\n\nAdvocacy and Argument\n\n\n\n\nEC 2201\n\n\nPrinciples of Microeconomics\n\n\n\n\nEC 2202\n\n\nPrinciples of Macroeconomics\n\n\n\n\nENG 1103\n\n\nFirst Year Composition\n\n\n\n\nEWS 2011\n\n\nAfrican American Hstrcl Exprnc\n\n\n\n\nFRL 2013\n\n\nLegal Env of Bus and its Txn\n\n\n\n\nFRL 3000\n\n\nManagerial Finance\n\n\n\n\nGSC 1160\n\n\nIntroduction to Astronomy\n\n\n\n\nHST 2201\n\n\nUnited States History to 1877\n\n\n\n\nHST 4406\n\n\nHst Wmn, Gndr, & Sxlty in US\n\n\n\n\nIBM 2000\n\n\nSpec Study for LD Students\n\n\n\n\nIBM 3012\n\n\nPrinciples of Marketing Mgmt\n\n\n\n\nIBM 3062\n\n\nProfessional Selling\n\n\n\n\nIBM 3072\n\n\nPromotional Strategies\n\n\n\n\nIBM 3202\n\n\nMarket Analysis and Control\n\n\n\n\nIBM 3302\n\n\nMarketing Research\n\n\n\n\nIBM 4112\n\n\nConsumer Behavior\n\n\n\n\nKIN 3010\n\n\nFoundations of Exercise Scienc\n\n\n\n\nLS 1020\n\n\nKnwldg Lrning Engmnt Success\n\n\n\n\nMAT 1250\n\n\nIntro Calculus for Business\n\n\n\n\nMHR 3010\n\n\nPrinciples of Management\n\n\n\n\nMHR 3020\n\n\nOrganizational Behavior\n\n\n\n\nMU 1010\n\n\nMusic Appreciation\n\n\n\n\nPHL 2020\n\n\nCritical Thinking\n\n\n\n\nPHL 2040\n\n\nEthical Prob in Contemp Life\n\n\n\n\nPLS 2010\n\n\nIntro to American Government\n\n\n\n\nPSY 2201\n\n\nIntroduction to Psychology\n\n\n\n\nSTA 1205\n\n\nStats w/Applications w/Support\n\n\n\n\nSTA 1205A\n\n\nStats w/Applications w/Sup Act\n\n\n\n\nTOM 3010\n\n\nOperations Management\n\n\n\n\nTOM 3020\n\n\nStatistical Fndtn Bus Analytic"
+  },
+  {
+    "objectID": "data-wrangling.html",
+    "href": "data-wrangling.html",
+    "title": "Data Wrangling with Tidyverse",
+    "section": "",
+    "text": "This page demonstrates data wrangling techniques using the Tidyverse in R. The exercises cover filtering, reshaping, pivoting, handling missing values, and combining data wrangling with visualization — applied to real datasets including airquality, nycflights13, relig_income, and us_rent_income."
+  },
+  {
+    "objectID": "data-wrangling.html#air-quality-data-filtering-and-selection",
+    "href": "data-wrangling.html#air-quality-data-filtering-and-selection",
+    "title": "Data Wrangling with Tidyverse",
+    "section": "Air Quality Data: Filtering and Selection",
+    "text": "Air Quality Data: Filtering and Selection\nWorking with R’s built-in airquality dataset to demonstrate both Tidyverse and base R approaches to data extraction.\n\n\nShow code\nair.tib &lt;- as_tibble(airquality)\n\n# Tidyverse approach: filter and select\nair.tib %&gt;%\n  filter(Temp == 97) %&gt;%\n  select(Ozone)\n\n\n# A tibble: 1 × 1\n  Ozone\n  &lt;int&gt;\n1    76"
+  },
+  {
+    "objectID": "data-wrangling.html#nyc-flights-worst-arrival-delays",
+    "href": "data-wrangling.html#nyc-flights-worst-arrival-delays",
+    "title": "Data Wrangling with Tidyverse",
+    "section": "NYC Flights: Worst Arrival Delays",
+    "text": "NYC Flights: Worst Arrival Delays\nIdentifying the 10 worst daily arrival delays across all of 2013, then averaging them by month to reveal seasonal patterns.\n\n\nShow code\nlibrary(nycflights13)\n\nworst_delays &lt;- flights %&gt;%\n  drop_na(arr_delay) %&gt;%\n  group_by(year, month, day) %&gt;%\n  slice_max(arr_delay, n = 10, with_ties = FALSE) %&gt;%\n  ungroup() %&gt;%\n  group_by(month) %&gt;%\n  summarise(avg_worst_delay = mean(arr_delay))\n\nggplot(worst_delays, aes(x = factor(month), y = avg_worst_delay)) +\n  geom_col(fill = \"#3498db\", alpha = 0.85) +\n  labs(\n    title = \"Average of the 10 Worst Daily Arrival Delays by Month\",\n    subtitle = \"NYC flights, 2013 — extreme delays are surprisingly consistent across months\",\n    x = \"Month\", y = \"Average Delay (minutes)\"\n  ) +\n  theme_minimal(base_size = 13) +\n  theme(plot.title = element_text(face = \"bold\"))\n\n\n\n\n\n\n\n\n\nInsight: The average of the most extreme arrival delays remains relatively stable across months, with no dramatic seasonal pattern, suggesting that factors causing very large delays are not strongly tied to the time of year."
+  },
+  {
+    "objectID": "data-wrangling.html#reshaping-data-religion-and-income",
+    "href": "data-wrangling.html#reshaping-data-religion-and-income",
+    "title": "Data Wrangling with Tidyverse",
+    "section": "Reshaping Data: Religion and Income",
+    "text": "Reshaping Data: Religion and Income\nTransforming the relig_income dataset from wide to long format for visualization, then creating a grouped bar chart showing income distributions across religious affiliations.\n\n\nShow code\nrelig_long &lt;- relig_income %&gt;%\n  pivot_longer(-religion, names_to = \"income\", values_to = \"count\") %&gt;%\n  filter(income != \"Don't know/refused\")\n\nggplot(relig_long, aes(x = religion, y = count, fill = income)) +\n  geom_col(position = position_dodge(preserve = \"single\")) +\n  scale_fill_viridis_d() +\n  labs(\n    title = \"Income Distribution by Religious Affiliation\",\n    subtitle = \"Data reshaped from wide to long format using pivot_longer()\",\n    x = \"Religion\", y = \"Number of Respondents\", fill = \"Income Bracket\"\n  ) +\n  theme_minimal(base_size = 11) +\n  theme(\n    axis.text.x = element_text(angle = 45, hjust = 1, size = 9),\n    plot.title = element_text(face = \"bold\"),\n    legend.position = \"bottom\"\n  )"
+  },
+  {
+    "objectID": "data-wrangling.html#rent-vs.-income-pivot-wider",
+    "href": "data-wrangling.html#rent-vs.-income-pivot-wider",
+    "title": "Data Wrangling with Tidyverse",
+    "section": "Rent vs. Income: Pivot Wider",
+    "text": "Rent vs. Income: Pivot Wider\nUsing pivot_wider() to reshape the us_rent_income dataset and explore the relationship between median income and median rent across US states.\n\n\nShow code\nus_rent_income %&gt;%\n  pivot_wider(names_from = variable, values_from = c(estimate, moe)) %&gt;%\n  ggplot(aes(x = estimate_income, y = estimate_rent)) +\n  geom_point(color = \"#27ae60\", size = 2.5, alpha = 0.7) +\n  geom_smooth(method = \"lm\", se = FALSE, color = \"#e74c3c\", linewidth = 1.2) +\n  labs(\n    title = \"Median Income vs. Median Rent Across US States\",\n    subtitle = \"Strong positive relationship — higher income states have higher rents\",\n    x = \"Median Income ($)\", y = \"Median Rent ($)\"\n  ) +\n  theme_minimal(base_size = 13) +\n  theme(plot.title = element_text(face = \"bold\"))"
+  },
+  {
+    "objectID": "data-wrangling.html#handling-missing-values",
+    "href": "data-wrangling.html#handling-missing-values",
+    "title": "Data Wrangling with Tidyverse",
+    "section": "Handling Missing Values",
+    "text": "Handling Missing Values\nDemonstrating multiple strategies for identifying and replacing missing values in the airquality dataset using mean imputation.\n\n\nShow code\nair.tib &lt;- as_tibble(airquality)\n\n# Missing value summary\nmissing_summary &lt;- air.tib %&gt;%\n  summarise(\n    missing_n = sum(is.na(Solar.R)),\n    missing_pct = round(mean(is.na(Solar.R)) * 100, 1)\n  )\n\nmissing_summary %&gt;%\n  gt() %&gt;%\n  cols_label(missing_n = \"Missing Count\", missing_pct = \"Missing %\") %&gt;%\n  tab_header(title = \"Solar Radiation: Missing Value Summary\")\n\n\n\n\n\n\n\n\nSolar Radiation: Missing Value Summary\n\n\nMissing Count\nMissing %\n\n\n\n\n7\n4.6\n\n\n\n\n\n\n\n\n\nShow code\n# Compute rounded mean for imputation\nsolar_mean_rounded &lt;- air.tib %&gt;%\n  summarise(avg = round(mean(Solar.R, na.rm = TRUE))) %&gt;%\n  pull(avg)\n\n# Replace NAs with mean\nair.tib &lt;- air.tib %&gt;%\n  mutate(Solar.R = if_else(is.na(Solar.R), solar_mean_rounded, Solar.R))\n\n# Verify\npaste(\"Remaining NAs in Solar.R:\", sum(is.na(air.tib$Solar.R)))\n\n\n[1] \"Remaining NAs in Solar.R: 0\""
+  },
+  {
+    "objectID": "data-wrangling.html#temperature-analysis-by-month",
+    "href": "data-wrangling.html#temperature-analysis-by-month",
+    "title": "Data Wrangling with Tidyverse",
+    "section": "Temperature Analysis by Month",
+    "text": "Temperature Analysis by Month\nAggregating temperature data by month and visualizing it with ordered bar charts.\n\nTotal TemperatureMaximum Temperature\n\n\n\n\nShow code\nair.tib %&gt;%\n  mutate(Month_name = case_when(\n    Month == 5 ~ \"May\", Month == 6 ~ \"June\", Month == 7 ~ \"July\",\n    Month == 8 ~ \"August\", Month == 9 ~ \"September\"\n  )) %&gt;%\n  group_by(Month_name) %&gt;%\n  summarise(total_temp = sum(Temp, na.rm = TRUE)) %&gt;%\n  ggplot(aes(x = total_temp, y = fct_reorder(Month_name, total_temp))) +\n  geom_col(fill = \"#e74c3c\", alpha = 0.85) +\n  labs(title = \"Total Recorded Temperature by Month\", x = \"Total Temperature\", y = \"\") +\n  theme_minimal(base_size = 13) +\n  theme(plot.title = element_text(face = \"bold\"))\n\n\n\n\n\n\n\n\n\n\n\n\n\nShow code\nair.tib %&gt;%\n  group_by(Month) %&gt;%\n  summarise(max_temp = max(Temp, na.rm = TRUE)) %&gt;%\n  mutate(Month = recode(Month, `5` = \"May\", `6` = \"June\", `7` = \"July\",\n                               `8` = \"August\", `9` = \"September\")) %&gt;%\n  ggplot(aes(x = max_temp, y = fct_reorder(Month, max_temp))) +\n  geom_col(fill = \"#f39c12\", alpha = 0.85) +\n  labs(title = \"Highest Temperature by Month\", x = \"Maximum Temperature (°F)\", y = \"\") +\n  theme_minimal(base_size = 13) +\n  theme(plot.title = element_text(face = \"bold\"))"
+  },
+  {
+    "objectID": "data-wrangling.html#multivariate-exploration-ozone-relationships",
+    "href": "data-wrangling.html#multivariate-exploration-ozone-relationships",
+    "title": "Data Wrangling with Tidyverse",
+    "section": "Multivariate Exploration: Ozone Relationships",
+    "text": "Multivariate Exploration: Ozone Relationships\nExploring how temperature, wind speed, and their ratio relate to ozone levels using faceted scatter plots.\n\n\nShow code\nair.tib %&gt;%\n  mutate(temp_wind = Temp / Wind) %&gt;%\n  pivot_longer(cols = c(Temp, Wind, temp_wind),\n               names_to = \"variable\",\n               values_to = \"value\") %&gt;%\n  ggplot(aes(x = value, y = Ozone)) +\n  geom_point(alpha = 0.5, color = \"#3498db\", size = 1.8) +\n  geom_smooth(method = \"lm\", se = FALSE, color = \"#e74c3c\", linewidth = 1) +\n  facet_wrap(~variable, scales = \"free_x\") +\n  labs(\n    title = \"Ozone vs. Temperature, Wind, and Their Ratio\",\n    subtitle = \"Temperature drives ozone up; wind drives it down\",\n    x = \"Variable Value\", y = \"Ozone (ppb)\"\n  ) +\n  theme_minimal(base_size = 13) +\n  theme(\n    plot.title = element_text(face = \"bold\"),\n    strip.text = element_text(face = \"bold\")\n  )\n\n\n\n\n\n\n\n\n\nConclusion: Ozone is positively associated with temperature and negatively associated with wind speed. The ratio Temp/Wind does not reveal a strong linear relationship, indicating that the individual effects of temperature and wind are more informative than their simple quotient."
+  },
+  {
+    "objectID": "data-wrangling.html#top-destinations-from-nyc",
+    "href": "data-wrangling.html#top-destinations-from-nyc",
+    "title": "Data Wrangling with Tidyverse",
+    "section": "Top Destinations from NYC",
+    "text": "Top Destinations from NYC\nA quick analysis of flight volumes to identify the most popular destinations from New York City airports.\n\n\nShow code\nflights %&gt;%\n  count(dest, sort = TRUE) %&gt;%\n  slice_head(n = 10) %&gt;%\n  gt() %&gt;%\n  cols_label(dest = \"Destination\", n = \"Number of Flights\") %&gt;%\n  tab_header(\n    title = \"Top 10 Destinations from NYC\",\n    subtitle = \"2013 flight data from nycflights13\"\n  ) %&gt;%\n  fmt_number(columns = n, use_seps = TRUE, decimals = 0)\n\n\n\n\n\n\n\n\nTop 10 Destinations from NYC\n\n\n2013 flight data from nycflights13\n\n\nDestination\nNumber of Flights\n\n\n\n\nORD\n17,283\n\n\nATL\n17,215\n\n\nLAX\n16,174\n\n\nBOS\n15,508\n\n\nMCO\n14,082\n\n\nCLT\n14,064\n\n\nSFO\n13,331\n\n\nFLL\n12,055\n\n\nMIA\n11,728\n\n\nDCA\n9,705"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Student Portfolio",
+    "section": "",
+    "text": "Student Portfolio\n\n\n\nI’m a business, marketing, and analytics student at Cal Poly Pomona building a portfolio that highlights my data science projects, R programming skills, marketing strategy work, SAP enterprise system experience, and professional certifications in Tableau and Excel. I bring strong communication, leadership, and teamwork skills alongside hands-on experience with Python, RStudio, ggplot2, and data-informed decision making.\n\nView Resume Data Science Work See Projects"
+  },
+  {
+    "objectID": "index.html#focus-areas",
+    "href": "index.html#focus-areas",
+    "title": "Student Portfolio",
+    "section": "Focus Areas",
+    "text": "Focus Areas\n\n\nData Science & R Programming\nI build data visualizations with ggplot2, wrangle datasets using the Tidyverse, create interactive plots with Plotly, and apply functional programming patterns to real-world data analysis in R.\n\n\nMarketing Strategy\nI connect my coursework and projects to promotional strategy, consumer behavior, marketing research, and persuasive communication through campaign planning and market analysis.\n\n\nAnalytics & Business Intelligence\nI apply Google Analytics, Tableau, Excel PivotTables, business analytics, and statistical methods to make data-informed recommendations."
+  },
+  {
+    "objectID": "index.html#portfolio-snapshot",
+    "href": "index.html#portfolio-snapshot",
+    "title": "Student Portfolio",
+    "section": "Portfolio Snapshot",
+    "text": "Portfolio Snapshot\n\n\n43\nCourses completed\n\n\n4\nSAP modules completed\n\n\n3\nProfessional certifications"
+  },
+  {
+    "objectID": "index.html#featured-work",
+    "href": "index.html#featured-work",
+    "title": "Student Portfolio",
+    "section": "Featured Work",
+    "text": "Featured Work\n\n\nData Visualization in R\nScatter plots, bar charts, boxplots, correlation heatmaps, and interactive Plotly visualizations built with ggplot2 and the Wooldridge attendance dataset.\nOpen section\n\n\nData Wrangling with Tidyverse\nData reshaping, pivot operations, missing value handling, and multi-dataset analysis using dplyr, tidyr, and ggplot2 on NYC flights, air quality, and census data.\nOpen section\n\n\nSAP & Enterprise Projects\nHands-on SAP work across Financial Accounting, Sales & Distribution, Materials Management, and Production Planning modules.\nOpen section\n\n\nMarketing Projects\nCampaign planning, promotional strategies, consumer behavior analysis, and research-based marketing recommendations.\nOpen section\n\n\nR Programming & Functions\nCustom functions, apply/map patterns, nested data analysis, and automated chart generation for student-teacher ratio data across multiple years.\nOpen section\n\n\nAnalytics & Certifications\nTableau 2024.1, Excel PivotTables, Google Analytics reporting, and statistical coursework foundations.\nOpen section"
+  },
+  {
+    "objectID": "presentations.html",
+    "href": "presentations.html",
+    "title": "Presentations",
+    "section": "",
+    "text": "These slide decks were developed using Quarto and Revealjs, allowing for dynamic, code-driven storytelling and interactive data visualizations.\n\n\n  \n    \n      \n    \n    Advanced R Programming\n    Module 12 Reflection\n    Insights into advanced programming concepts, functional programming, and efficient R code.\n    View Slides\n  \n\n  \n    \n      \n    \n    Advanced Data Types\n    Module 08 Reflection\n    An exploration of complex data structures in R, including lists, data frames, and factor management.\n    View Slides"
   },
   {
     "objectID": "r-programming.html",
